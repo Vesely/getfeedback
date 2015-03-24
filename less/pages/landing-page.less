@@ -1,0 +1,55 @@
+.landing-page {
+	.wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 123;
+		padding-top: 86px;
+		@media (max-width: 1069px) {
+			width: 1069px;
+		}
+		.form {
+			width: 190px;
+			margin: 0 auto;
+			margin-top: 72px;
+			label {
+				display: block;
+				width: 190px;
+				height: 190px;
+				background: url(../img/upload-box.svg) no-repeat;
+				text-align: center;
+				cursor: pointer;
+				img {
+					margin-top: 53px;
+					display: inline-block;
+				}
+				span {
+					display: block;
+					margin-top: 35px;
+					font-family: @font-family-primary;
+					font-weight: @font-weight-normal;
+					font-size: 13px;
+					color: @gf-blue;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+	.background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 1;
+		margin-top: 78px;
+		@media (max-width: 1069px) {
+			width: 1069px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
