@@ -47,7 +47,7 @@ gulp.task('default', function() {
 //Watch
 gulp.task('watch', ['less'], function() {
   //Watch changes (less, )
-  gulp.watch('www/less/**.less', ['less']);
-  gulp.watch('www/less/**/*.less', ['less']);
+  gulp.watch('less/**.less', ['less']);
+  gulp.watch('less/**/*.less', ['less']);
 });
 
