@@ -28,15 +28,26 @@
 		<div class="wrapper">
 			<h1>Get feedback on your design.</h1>
 			<form class="form">
-				<input type="file" id="uploadInput" class="hidden">
-				<label class="upload-box" for="uploadInput">
-					<img src="img/picture.png" alt="Picutre icon">
-					<span>Click here to upload.</span>
-				</label>
+				<div class="upload-section">
+					<input type="file" id="uploadInput" class="hidden">
+					<label class="upload-box" for="uploadInput">
+						<img src="img/picture.png" alt="Picutre icon">
+						<span>Click here to upload.</span>
+					</label>
+				</div>
+				<div class="form-modal hidden">
+					<input type="email" class="form-control" placeholder="Write your e-mail…">
+					<button type="submit" class="btn">
+						<span>Continue &amp; get a link</span>
+						<img src="img/arrow-right.svg" alt="Arrow right">
+					</button>
+				</div>
 			</form>
 		</div>
 		<div class="background">
-			<img src="img/background.svg" alt="background">
+			<div class="image">
+				<img src="img/background.svg" alt="background">
+			</div>
 		</div>
 	</div>
 	
