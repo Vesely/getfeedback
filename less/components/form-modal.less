@@ -13,6 +13,19 @@
 
 	overflow: hidden;
 
+	z-index: 12345;
+
+
+	display: block;
+	opacity: 1;
+	animation: omg 4s ease-in-out;
+	animation-delay: 2s;
+	@keyframes omg {
+		0% { display: none; opacity: 0; }
+		75% { display: block; opacity: 0;  }
+		100% { display: block; opacity: 1; }
+	}
+
 	.form-control {
 		height: 58px;
 		border: 0;
@@ -72,6 +85,7 @@
 		&:hover,
 		&:focus {
 			text-decoration: none;
+			background: lighten(@gf-blue, 5%);
 		}
 
 		&:focus, 

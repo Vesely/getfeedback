@@ -5,7 +5,8 @@
 		left: 0;
 		right: 0;
 		width: 100%;
-		z-index: 123;
+		height: 100%;
+		z-index: 12;
 		padding-top: 86px;
 		@media (max-width: 1069px) {
 			width: 1069px;
@@ -37,19 +38,44 @@
 			}
 		}
 	}
-	.background {
+	.progress {
+		.anim;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		// height: 0%;
+		display: block;
 		position: absolute;
+		background: fade(@gf-blue, 80%);
+		z-index: 12;
+		animation: progress 4s ease-in-out;
+		animation-delay: 2s;
+	}
+	@keyframes progress {
+		0% { height: 0; }
+		100% { height: 100%; opacity: 1;  }
+		// 100% { height: 100%; opacity: 0; }
+	}
+	.background {
+		// position: absolute;
+		position: relative;
 		top: 0;
 		left: 0;
 		right: 0;
 		width: 100%;
 		z-index: 1;
-		margin-top: 78px;
 		@media (max-width: 1069px) {
 			width: 1069px;
 		}
-		img {
-			width: 100%;
+		.image {
+			position: relative;
+			z-index: 1;
+			padding-top: 78px;
+			img {
+				width: 100%;
+			}
 		}
 	}
 }
