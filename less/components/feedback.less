@@ -1,0 +1,112 @@
+.feedback {
+	position: absolute;
+	
+	.point {
+		.anim;
+		background: @gf-blue;
+		border: 3px solid @white;
+		box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.29);
+		width: 36px;
+		height: 36px;
+		display: block;
+		border-radius: 50%;
+		text-align: center;
+
+		font-weight: @font-weight-bold;
+		font-size: 14px;
+		color: @white;
+		line-height: 19px;
+
+		padding-top: 4px;
+
+		cursor: pointer;
+
+		&:hover, 
+		&:focus {
+			background: darken(@gf-blue, 5%);
+			box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.49);
+		}
+
+		&:active {
+			transform: translateY(1px);
+		}
+	}
+	.feedback-box {
+		width: 258px;
+		position: relative;
+		margin-top: -36px;
+		left: 50px;
+		background: @gf-white;
+		box-shadow: 0px 24px 35px 0px rgba(0,0,0,0.32);
+		border-radius: 4px;
+		// overflow: hidden;
+		z-index: 12;
+		&:before {
+			content: '';
+			background: @gf-white;
+			box-shadow: 0px 24px 35px 0px rgba(0,0,0,0.32);
+			width: 10px;
+			height: 10px;
+			display: block;
+			transform: rotate(45deg);
+
+			position: absolute;
+			z-index: 1;
+
+			top: 13px;
+			left: -5px;
+		}
+		.feedback-messages {
+			position: relative;
+			z-index: 12;
+			.message {
+				padding-left: 19px;
+				padding-right: 19px;
+				padding-top: 13px;
+				padding-bottom: 15px;
+				border-bottom: 1px solid @gray-light;
+				p {
+					margin: 0;
+					padding: 0;
+					margin-bottom: 12px;
+					font-weight: @font-weight-light;
+					font-size: 14px;
+					color: @gray;
+					line-height: 19px;
+				}
+				.badge {
+				}
+			}
+		}
+		.form {
+			padding-top: 13px;
+			&.form-small {
+				.form-control {
+					height: 30px;
+				}
+				.btn {
+					// max-height: 0;
+					display: none;
+				}
+			}
+			.form-control {
+				.anim;
+				margin-top: 1px;
+				background: @gf-white;
+				resize: none;
+				height: 110px;
+				width: 100%;
+				padding-right: 25px;
+				margin-bottom: 5px;
+			}
+			.btn {
+				// .anim;
+				overflow: hidden;
+				border-radius: 0 0 4px 4px;
+				border: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+}

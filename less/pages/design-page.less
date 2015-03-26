@@ -1,0 +1,90 @@
+//1095px
+.design-page {
+	.design {
+		position: relative;
+		// padding-left: 90px;
+		// padding-right: 90px;
+		padding-top: 70px;
+		padding-bottom: 200px;
+		// width: 100%;
+		// @media (max-width: 1069px) {
+		// 	width: 1069px;
+		// }
+		width: 1095px;
+		margin: 0 auto;
+		.image {
+			img {
+				width: 100%;
+				box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.16);
+			}
+		}
+	}
+	.invite-section {
+		position: fixed;
+		right: 10px;
+		top: 50%;
+		.invite-toggle {
+			.anim;
+			position: relative;
+			background: @white;
+			box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.18);
+			height: 32px;
+			width: 32px;
+			display: block;
+			border-radius: 50%;
+			text-align: center;
+			padding-top: 5px;
+			cursor: pointer;
+
+			&:before {
+				.anim;
+				content: 'Invitations';
+				position: absolute;
+				left: -75px;
+				font-size: 11px;
+				color: @white;
+				background: fade(#121314, 64%);
+				border-radius: 14px;
+				width: 68px;
+				height: 23px;
+				display: block;
+				line-height: 22px;
+				opacity: 0;
+			}
+			&:after {
+				.anim;
+				content: '';
+				position: absolute;
+				left: -11px;
+				top: 50%;
+				width: 5px;
+				height: 7px;
+				margin-top: -3px;
+				transform: rotate(45deg);
+				display: block;
+				background: fade(#121314, 64%);
+				opacity: 0;
+			}
+
+			&:hover, 
+			&:focus {
+				background: fade(#121314, 64%);
+				.mail {
+					background-image: url(../img/mail-white.svg);
+				}
+				&:before,
+				&:after {
+					opacity: 1;
+				}
+			}
+			
+			.mail {
+				.anim;
+				background: url(../img/mail.svg) no-repeat;
+				width: 16px;
+				height: 12px;
+				display: inline-block;
+			}
+		}
+	}
+}
