@@ -81,47 +81,30 @@ module.exports = {
 	 */
 	addEmailToDesign: function (req, res) {
 
-			var src = req.param("src");
-			var email = req.param("email");
-			
-			User.find().where({email: email}).exec(function(err, usr){
-				if (err) {
-					res.send(500, { error: "DB Error" });
-				} else {
-					var user;
-					if (usr) {
-						// res.send(400, {error: "Email already Taken"});
-						//User exist
-						req.session.user = usr;
-						user = usr[0];
-					} else {
-						User.create({email: email}).done(function(error, user) {
-							if (error) {
-								res.send(500, {error: "DB Error"});
-							} else {
-								req.session.user = user;
-								user = user[0];
-							}
-
-						});
-					}
-					Designs.create({src: src, userId: user.id}).exec(function(error, design) {
+		//Variables
+		var src = req.param("src");
+		var email = req.param("email");
+		
+		//Find user by email, if not found, create him.
+		User.findOrCreate({email: email}, {email: email}).exec(function(err, usr){
+			if (err) {
+				res.send(500, { error: "DB Error" });
+			} else {
+				if (usr) {
+					Designs.create({src: src, userId: usr.id}).exec(function(error, design) {
 						if (error) {
 							res.send(500, {error: "DB Error"});
 						} else {
 							res.redirect( 'design/'+design.id);
 						}
-						// sails.log.info(user);
 					});
+				} else {
+					sails.log.info('Nenašel jsem uživatele');
+					res.redirect('/');
 				}
-			});
-
-
-
-			
-			
- 			//sails.log.info(req.session.user);
-			// res.send(req.session.user);
+				
+			}
+		});
 	},
 };
 
