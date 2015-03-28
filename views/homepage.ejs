@@ -1,16 +1,17 @@
 <!-- Default home page -->
-<div class="landing-page" ng-controller="HomepageCtrl">
+<div class="landing-page">
 	<div class="wrapper">
-		<h1>Get feedback on your design.</h1>
-		<form class="form" action="designs/addDesign" method="post" enctype="multipart/form-data">
+		<h1>Get feedback on your design. </h1>
+		<form class="form" action="designs/addEmailToDesign" method="post" enctype="multipart/form-data">
 			<div class="upload-section">
-				<input type="file" name="design" id="uploadInput" class="hidden" ng-file-select="onFileSelect($files)">
+				<input type="file" name="design" id="uploadInput" class="hidden design-input" ng-file-select="onFileSelect($files)">
 				<label class="upload-box" for="uploadInput">
 					<img src="img/picture.png" alt="Picutre icon">
 					<span>Click here to upload.</span>
 				</label>
 			</div>
-			<div class="form-modal">
+			<div class="form-modal hidden">
+				<input type="hidden" name="src" class="design-src">
 				<input type="email" name="email" class="form-control" placeholder="Write your e-mail…">
 				<button type="submit" class="btn">
 					<span>Continue &amp; get a link</span>

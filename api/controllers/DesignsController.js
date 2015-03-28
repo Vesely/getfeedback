@@ -15,27 +15,39 @@ module.exports = {
 			// 	id: id,
 			// 	design: design
 			// });
-			User.findOne(design.userId).exec(function(err, user){
-				return res.view('design', {
-					design: design,
-					user: user
+			if (err || !design) {
+				// return res.serverError(err);
+				sails.log.info('Design neexistuje.');
+				res.redirect('/');
+			} else {
+				User.findOne(design.userId).exec(function(err, user){
+					if (err) {
+						// return res.serverError(err);
+						sails.log.info('Uživatel neexistuje.');
+						res.redirect('/');
+					} else {
+						return res.view('design', {
+							design: design,
+							user: user
+						});
+					}
 				});
-			});
+			}
 		});
 	},
 
 	/**
-	 * `DesignsController.addDesign()`
+	 * `DesignsController.uploadDesign()`
 	 *
-	 * Add Design and upload file to the server's disk.
+	 * upload file to the server's disk.
 	 */
-	addDesign: function (req, res) {
+	uploadDesign: function (req, res) {
 
 		res.setTimeout(0);
 
 		req.file('design').upload({
 			// You can apply a file upload limit (in bytes)
-			maxBytes: 1000000,
+			// maxBytes: 1000000,
 			//Set custom path
 			dirname: require('path').resolve(sails.config.appPath, 'assets/uploads')
 		// }, function whenDone(err, file) {
@@ -44,61 +56,72 @@ module.exports = {
 				return res.serverError(err);
 			} else {
 				// If no files were uploaded, respond with an error.
-			if (file.length === 0){
-				return res.badRequest('No file was uploaded');
-			}
-
-			// return res.json({
-			// 	files: file,
-			// 	fileName: file.filename,
-			// 	textParams: req.params.all()
-			// });
-
-			var file = file[0];
-			
-			var fileName = file.fd;
-			var fileNameArray = fileName.split("/");
-			var fileName = fileNameArray[fileNameArray.length - 1];
-
-			Designs.create({src: fileName, userId: 1}).exec(function(error, design) {
-				if (error) {
-					res.send(500, {error: "DB Error"});
-				} else {
-					res.redirect( 'design/'+design.id);
+				if (file.length === 0){
+					return res.badRequest('No file was uploaded');
 				}
-				// sails.log.info(user);
+
+				var file = file[0];
+				
+				var fileName = file.fd;
+				var fileNameArray = fileName.split("/");
+				var fileName = fileNameArray[fileNameArray.length - 1];
+
+				return res.json({
+					files: file,
+					fileName: fileName
+				});
+			}
+		});
+	},
+
+	/**
+	 * `DesignsController.addEmailToDesign()`
+	 *
+	 * Add Design and upload file to the server's disk.
+	 */
+	addEmailToDesign: function (req, res) {
+
+			var src = req.param("src");
+			var email = req.param("email");
+			
+			User.find().where({email: email}).exec(function(err, usr){
+				if (err) {
+					res.send(500, { error: "DB Error" });
+				} else {
+					var user;
+					if (usr) {
+						// res.send(400, {error: "Email already Taken"});
+						//User exist
+						req.session.user = usr;
+						user = usr[0];
+					} else {
+						User.create({email: email}).done(function(error, user) {
+							if (error) {
+								res.send(500, {error: "DB Error"});
+							} else {
+								req.session.user = user;
+								user = user[0];
+							}
+
+						});
+					}
+					Designs.create({src: src, userId: user.id}).exec(function(error, design) {
+						if (error) {
+							res.send(500, {error: "DB Error"});
+						} else {
+							res.redirect( 'design/'+design.id);
+						}
+						// sails.log.info(user);
+					});
+				}
 			});
 
 
-			// var email = req.param("email");
-			
-			
-			// User.find().where({email: email}).exec(function(err, usr){
-			// 	if (err) {
-			// 		res.send(500, { error: "DB Error" });
-			// 	} else if (usr) {
-			// 		// res.send(400, {error: "Email already Taken"});
-			// 		//User exist
-			// 		req.session.user = usr;
-			// 		var user = usr;
-			// 	} else {
-			// 		User.create({email: email}).done(function(error, user) {
-			// 			if (error) {
-			// 				res.send(500, {error: "DB Error"});
-			// 			} else {
-			// 				req.session.user = user;
-			// 				var user = user;
-			// 			}
-					// sails.log.info(user);
 
-			// 		});
-			// 	}
-			// 	res.send(user);
-			// });
+			
+			
  			//sails.log.info(req.session.user);
 			// res.send(req.session.user);
-			}
-		});
 	},
 };
 

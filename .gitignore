@@ -16,6 +16,7 @@ css/main.min.css
 config/local.js
 .tmp
 dump.rdb
+assets/uploads
 
 #Node.JS
 lib-cov
