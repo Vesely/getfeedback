@@ -38,6 +38,18 @@ module.exports.routes = {
     // view: 'homepage'
   },
 
+  '/designs/addEmailToDesign': {
+    controller: 'Designs',
+    action: 'addEmailToDesign'
+    // view: 'homepage'
+  },
+
+  '/messages': {
+    controller: 'FeedbackMessages',
+    action: 'messages'
+    // view: 'messages'
+  },
+
   '/design/:id': {
     controller: 'Designs',
     action: 'renderDesign'

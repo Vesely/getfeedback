@@ -1,0 +1,23 @@
+/**
+* Feedbacks.js
+*
+* @description :: TODO: You might write a short summary of how this model works and what it represents here.
+* @docs        :: http://sailsjs.org/#!documentation/models
+*/
+
+module.exports = {
+
+  attributes: {
+
+    content : { type: 'string' },
+
+    top : { type: 'integer' },
+    
+    left : { type: 'integer' },
+
+    designId : { type: 'integer' },
+
+    userId : { type: 'integer' }
+  }
+};
+

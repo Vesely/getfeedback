@@ -9,12 +9,29 @@ module.exports = {
 	
 	renderDesign: function(req, res) {
 		var id = req.param('id');
+
+
+		
+
+		// Designs.findOne(id).exec(function(err, design) {
+
+		//   if (err || !design) {
+		//     // return res.serverError(err);
+		//     sails.log.info('Design neexistuje.');
+		//     res.redirect('/');
+		//   } else {
+		//     sails.log.info(design);
+		//   }
+
+		//   this.closureFn = function () {
+		//      return design;
+		//   };
+		// });
+
+		// var design = closureFn();
+		// //sails.log.info(design);
 		
 		Designs.findOne(id).exec(function(err, design){
-			// return res.json({
-			// 	id: id,
-			// 	design: design
-			// });
 			if (err || !design) {
 				// return res.serverError(err);
 				sails.log.info('Design neexistuje.');
@@ -26,9 +43,22 @@ module.exports = {
 						sails.log.info('Uživatel neexistuje.');
 						res.redirect('/');
 					} else {
-						return res.view('design', {
-							design: design,
-							user: user
+						Feedbacks.find({designId: design.id}).exec(function(err, feedbacks){
+							if (err) {
+								// res.redirect('/');
+								return res.view('design', {
+									design: design,
+									user: user
+								});
+							} else {
+								// Feedbacks.subscribe(req.socket);
+ 	    						// Feedbacks.subscribe(req.socket, feedbacks);
+								return res.view('design', {
+									design: design,
+									user: user,
+									feedbacks: feedbacks
+								});
+							}
 						});
 					}
 				});
@@ -106,5 +136,35 @@ module.exports = {
 			}
 		});
 	},
+
+	/**
+	 * `DesignsController.addFeedback()`
+	 *
+	 * Add Design and upload file to the server's disk.
+	 */
+	addFeedback: function (req, res) {
+
+		//Variables
+		var content = req.param('content');
+		var designId = req.param('designId');
+		var top = req.param('top');
+		var left = req.param('left');
+
+		var feedback = Feedbacks.create({content: content, designId: designId, userId: 1, top : top, left: left}).exec(function(error, feedback) {
+				if (error) {
+					res.send(500, {error: "DB Error"});
+				} else {
+					// res.redirect( 'design/'+designId);
+					Feedbacks.publishCreate({id:feedback.id,content: content, designId: designId, userId: 1, top : top, left: left});
+					res.json({
+						status: 'ok'
+					})
+				}
+			});
+
+
+	},
+
+
 };
 

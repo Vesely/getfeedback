@@ -15,6 +15,17 @@ module.exports = {
     userId : {
     	type: 'integer'
     }
-  }
+  },
+  getDesign: function (designId) {
+		Designs.findOne(designId).exec(function (err, theDesign) {
+		// if (err) return cb(err);
+		// if (!theUser) return cb(new Error('Designs not found.'));
+		if (!theDesign) return 'chyba';
+
+		return theDesign;
+		// theUser.enrolledIn.add(options.courses);
+		// theUser.save(cb);
+		});
+	}
 };
 

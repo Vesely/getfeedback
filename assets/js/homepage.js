@@ -7,7 +7,7 @@ $(function() {
 
 
     $designInput.fileupload({
-        url: 'designs/uploadDesign',
+        url: 'api/designs/uploadDesign',
         dataType: 'json',
         done: function (e, data) {
             console.log(data);
