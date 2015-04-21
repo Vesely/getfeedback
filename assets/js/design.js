@@ -90,7 +90,7 @@ var renderFeedbackMessages = function() {
 		io.socket.get('/api/feedbackMessages?feedbackId='+feedbackId, function (messages) {
 			for (var i = 0; i < messages.length; i++) {
 				var msg = messages[i];
-				console.log(msg);
+				// console.log(msg);
 				$otherMessages.append('<div class="message"><p>'+msg.content+'</p></div>');
 			};
 		});
@@ -132,6 +132,7 @@ var renderFeedbacks = function () {
 				'</div>'
 			);
 		}
+		$('.feedback-add .point').text(feedbacks.length+1);
 		renderFeedbackMessages();
 		rebuildFeedbackActions();
 	});
@@ -144,7 +145,7 @@ io.socket.on("feedbacks", function(event){
 	renderFeedbacks();
 });
 
-io.socket.on("feedbackMessages", function(event){
+io.socket.on("feedbackmessages", function(event){
 	console.log('Změna ve "feedbackMessages"');
 	// renderFeedbackMessages();
 	renderFeedbacks();
