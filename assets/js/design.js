@@ -382,6 +382,7 @@ var sendFeedback = function() {
 	    });
 		//Clear content input
 		$contentInput.val('');
+		$('.feedback-add').hide();
 	}
 
 	return false;
