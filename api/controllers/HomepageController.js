@@ -7,5 +7,11 @@
 
 module.exports = {
 	
+	/**
+	* `HomepageController.index()`
+	*/
+	index: function (req, res) {
+		return res.view('homepage');
+	}
 };
 

@@ -1,7 +1,14 @@
 .feedback {
 	position: absolute;
-	
 	.point {
+		@keyframes point {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
 		.anim;
 		background: @gf-blue;
 		border: 3px solid @white;
@@ -20,7 +27,14 @@
 		padding-top: 4px;
 
 		cursor: pointer;
+		
 
+		&.new {
+			// transform: scale(.2);
+			animation-name: point;
+	    	animation-duration: .3s;
+		}
+		
 
 		&:hover, 
 		&:focus {

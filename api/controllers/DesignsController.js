@@ -9,27 +9,6 @@ module.exports = {
 	
 	renderDesign: function(req, res) {
 		var id = req.param('id');
-
-
-		
-
-		// Designs.findOne(id).exec(function(err, design) {
-
-		//   if (err || !design) {
-		//     // return res.serverError(err);
-		//     sails.log.info('Design neexistuje.');
-		//     res.redirect('/');
-		//   } else {
-		//     sails.log.info(design);
-		//   }
-
-		//   this.closureFn = function () {
-		//      return design;
-		//   };
-		// });
-
-		// var design = closureFn();
-		// //sails.log.info(design);
 		
 		Designs.findOne(id).exec(function(err, design){
 			if (err || !design) {
@@ -37,31 +16,29 @@ module.exports = {
 				sails.log.info('Design neexistuje.');
 				res.redirect('/');
 			} else {
-				User.findOne(design.userId).exec(function(err, user){
+				Feedbacks.find({designId: design.id}).exec(function(err, feedbacks){
 					if (err) {
-						// return res.serverError(err);
-						sails.log.info('Uživatel neexistuje.');
-						res.redirect('/');
-					} else {
-						Feedbacks.find({designId: design.id}).exec(function(err, feedbacks){
-							if (err) {
-								// res.redirect('/');
-								return res.view('design', {
-									design: design,
-									user: user
-								});
-							} else {
-								// Feedbacks.subscribe(req.socket);
- 	    						// Feedbacks.subscribe(req.socket, feedbacks);
-								return res.view('design', {
-									design: design,
-									user: user,
-									feedbacks: feedbacks
-								});
-							}
+						// res.redirect('/');
+						return res.view('design', {
+							design: design
+						});
+					} else {
+						// Feedbacks.subscribe(req.socket);
+    						// Feedbacks.subscribe(req.socket, feedbacks);
+						return res.view('design', {
+							design: design,
+							feedbacks: feedbacks
 						});
 					}
 				});
+				// User.findOne(design.userId).exec(function(err, user){
+				// 	if (err) {
+				// 		// return res.serverError(err);
+				// 		sails.log.info('Uživatel neexistuje.');
+				// 		res.redirect('/');
+				// 	} else {
+				// 	}
+				// });
 			}
 		});
 	},
@@ -96,9 +73,22 @@ module.exports = {
 				var fileNameArray = fileName.split("/");
 				var fileName = fileNameArray[fileNameArray.length - 1];
 
-				return res.json({
-					files: file,
-					fileName: fileName
+				// return res.json({
+				// 	files: file,
+				// 	fileName: fileName
+				// });
+				
+				sails.log.info('pruchod');
+				sails.log.info(fileName);
+
+				Designs.create({src: fileName, userId: 1}).exec(function(error, design) {
+					if (error) {
+						res.send(500, {error: "DB Error"});
+					} else {
+						sails.log.info('pruchod presouvam');
+						res.json(design.id);
+						// res.redirect('design/'+design.id);
+					}
 				});
 			}
 		});
@@ -136,35 +126,6 @@ module.exports = {
 			}
 		});
 	},
-
-	/**
-	 * `DesignsController.addFeedback()`
-	 *
-	 * Add Design and upload file to the server's disk.
-	 */
-	addFeedback: function (req, res) {
-
-		//Variables
-		var content = req.param('content');
-		var designId = req.param('designId');
-		var top = req.param('top');
-		var left = req.param('left');
-
-		var feedback = Feedbacks.create({content: content, designId: designId, userId: 1, top : top, left: left}).exec(function(error, feedback) {
-				if (error) {
-					res.send(500, {error: "DB Error"});
-				} else {
-					// res.redirect( 'design/'+designId);
-					Feedbacks.publishCreate({id:feedback.id,content: content, designId: designId, userId: 1, top : top, left: left});
-					res.json({
-						status: 'ok'
-					})
-				}
-			});
-
-
-	},
-
 
 };
 

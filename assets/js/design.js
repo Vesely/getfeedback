@@ -17,6 +17,27 @@ var showFeedbackBox = function (feedbackId) {
 }
 
 
+//Load design image
+var loadDesignImage = function () {
+	var designId = $('.design').data('id');
+	io.socket.get('/api/designs?id='+designId, function (design) {
+		// console.log(design.src);
+		var $img = $('.design .image img');
+		$img.attr('src', '/uploads/'+design.src).error(function() { 
+			setTimeout(function() {
+				console.log("error loading image");
+				$img.hide(0);
+				loadDesignImage();
+			}, 20);
+		}).load(function() {
+			$img.fadeIn(80);
+		});
+	});
+
+};
+loadDesignImage();
+
+
 var sendFeedbackMessage = function(content, feedbackId) {
 	//Send the message
 	console.log('Odesílám odpověď do feedbacku');
@@ -204,6 +225,7 @@ var renderFeedbackMessages = function() {
 						$msg.find('.user').addClass('its-me');
 					}
 				});
+
 
 			};
 			redrawFeedbackBtn();
