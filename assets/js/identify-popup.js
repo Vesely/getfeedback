@@ -28,11 +28,22 @@ IdentifyPopup.prototype = {
 	show: function(feedbackId)
 	{
 		this.log('showing');
-		this.popup.data('feedbackid', feedbackId);
+
+		if(feedbackId) {
+			this.feedbackId = feedbackId;
+		}else{
+			this.feedbackId = 'add';
+		}
+
+		this.popup.data('feedbackid', this.feedbackId);
 
 		this.backdrop.fadeIn(300);
 		this.popup.fadeIn(300);
 		this.input.focus();
+	},
+
+	getFeedbackId: function() {
+		return this.feedbackId;
 	},
 
 	close: function()

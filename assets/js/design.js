@@ -56,6 +56,7 @@ var openFeedback = function() {
 
 //Add feedback message to database
 var addFeedbackMessage = function() {
+	redrawFeedbackBtn();
 	console.log('chci přidat zpravu');
 	//Variables
 	var $form = $(this).parents('.form').first();
@@ -63,15 +64,40 @@ var addFeedbackMessage = function() {
 	var content = $contentInput.val();
 	// var designId = $form.data('designid');
 	var feedbackId = $form.data('feedbackid');
+	var userId = getUserFromStorage();
 	
 	$('.identify-popup .form').data('feedbackid', feedbackId);
 	$('.identify-popup .form').data('content', content);
 
-	//Show identify popup
-	identifyPopup.show(feedbackId);
+	if (!userId) {
+		//Show identify popup
+		identifyPopup.show(feedbackId);
+	}else{
+		//Send message
+		sendFeedbackMessage(content, feedbackId);
+
+		//Clear feedback input
+		$contentInput.val('');
+	}
 	
 	
 	return false;
+};
+
+
+//Redraw button if you are logged in
+var redrawFeedbackBtn = function () {
+	var $feedbackForm = $('.feedback .form');
+	var $sendBtn = $feedbackForm.find('.btn');
+	//Change button (Is user logged or not)
+	if (!getUserFromStorage()) {
+		//Change button text
+		$sendBtn.addClass('btn-identify');
+		$sendBtn.find('span').text('Identify yourself');
+	}else{
+		$sendBtn.removeClass('btn-identify');
+		$sendBtn.find('span').text('Send it');
+	}
 };
 
 
@@ -91,11 +117,24 @@ var identifyUserByPopup = function() {
 			//Close identify popup
 			identifyPopup.close();
 
-			//Send message
-			sendFeedbackMessage(content, feedbackId);
+			//
+			var feedbackId = identifyPopup.getFeedbackId();
 
-			//Clear feedback input
-			$('.feedback-'+feedbackId).find('form-msg .form-control').val('');
+			if (feedbackId != 'add') {
+				//Add Message
+				$('.feedback-'+feedbackId).find('.btn').trigger('click');
+
+				//Send message
+				// sendFeedbackMessage(content, feedbackId);
+
+				//Clear feedback input
+				// $('.feedback-'+feedbackId).find('.form-msg .form-control').val('');
+			}else{
+				//Add feedback
+				redrawFeedbackBtn();
+				$('.feedback-add .btn').trigger('click');
+			}
+
 		});
 	}
 
@@ -150,21 +189,29 @@ var renderFeedbackMessages = function() {
 			for (var i = 0; i < messages.length; i++) {
 				var msg = messages[i];
 				// console.log(msg);
-				$otherMessages.append('<div class="message message-'+msg.id+'"><p>'+msg.content+'</p><span class="badge user"></span></div>');
+				$otherMessages.append('<div class="message message-'+msg.id+'" data-user="'+msg.userId+'"><p>'+msg.content+'</p><span class="badge user"></span></div>');
 				var $msg = $('.message-'+msg.id);
 
 				// console.log(msg);
 				//Get user who write it
+
+				$msg.find('.user').text(msg.userId);
 				io.socket.get('/api/user?id='+msg.userId, function (user) {
-					$msg.find('.user').text(user.email);
+					$msg.find('.user').text(msg.userId+ ' - '+user.email);
+					
+					var myUserId = getUserFromStorage();
+					if(myUserId == msg.userId) {
+						$msg.find('.user').addClass('its-me');
+					}
 				});
 
 			};
-			if (messages.length > 0) {
-				//Change button text
-				var $sendBtn = $msg.parents('.feedback').first().find('.btn span');
-				$sendBtn.text('Identify yourself');
-			};
+			redrawFeedbackBtn();
+			// if (messages.length > 0) {
+			// 	//Change button text
+			// 	var $sendBtn = $msg.parents('.feedback').first().find('.btn span');
+			// 	$sendBtn.text('Identify yourself');
+			// };
 		});
 		
 	});
@@ -204,6 +251,10 @@ var renderFeedbacks = function () {
 			);
 			io.socket.get('/api/user?id='+fdb.userId, function (user) {
 				$renderFeedbacks.find('.message .user').text(user.email);
+				var myUserId = getUserFromStorage();
+				if(myUserId == user.id) {
+					$renderFeedbacks.find('.message .user').addClass('its-me');
+				}
 			});
 			$('.feedback-add .point').text(feedbacks.length+1);
 			
@@ -245,11 +296,13 @@ io.socket.on("feedbackmessages", function(event){
 var $feedbackAdd = $('.feedback-add');
 var $feedbackAddForm = $feedbackAdd.find('.form');
 
-
 var addFeedbackPoint = function () {
 	hideAllFeedbackBoxes();
 	$feedbackAdd.find('.feedback-box').removeClass('hidden');
-	
+
+
+	redrawFeedbackBtn();
+
 	//Offsets
 	var designLeftOffset = $(this).offset().left, //x
 		designTopOffset = $(this).offset().top; //y
@@ -282,26 +335,32 @@ var addFeedbackPoint = function () {
 var sendFeedback = function() {
 	//Variables
 	var $form = $('.feedback-add .form');
+	var $btn = $form.find('.btn');
 	var $contentInput = $form.find('.form-control');
 	var content = $contentInput.val();
 	var designId = $form.find('.design-id').val();
 	var top = $form.data('top');
 	var left = $form.data('left');
+	var userId = getUserFromStorage();
 
 	console.log('Odesílám feedback');
 
-	//post
-	io.socket.post('/api/feedbacks/create', {content: content, designId: designId, userId: 1, top: top, left: left}, function (response) {
-        console.log(response);
-        
-        hideAllFeedbackBoxes();
-        showFeedbackBox(response.id);
-    	
-    	renderFeedbacks();
-    });
-
-	//Clear content input
-	$contentInput.val('');
+	if (!userId) {
+		//Show identify popup
+		identifyPopup.show();
+	}else{
+		//post
+		io.socket.post('/api/feedbacks/create', {content: content, designId: designId, userId: userId, top: top, left: left}, function (response) {
+	        console.log(response);
+	        
+	        hideAllFeedbackBoxes();
+	        showFeedbackBox(response.id);
+	    	
+	    	renderFeedbacks();
+	    });
+		//Clear content input
+		$contentInput.val('');
+	}
 
 	return false;
 };
