@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="72px" height="86px" viewBox="0 0 72 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12005) - http://www.bohemiancoding.com/sketch -->
+    <title>anonym-user</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M53.7770461,34.1101876 C62.5724885,40.2559226 68.3255814,50.4561079 68.3255814,62 C68.3255814,80.7776815 53.1032629,96 34.3255814,96 C15.5478999,96 0.325581395,80.7776815 0.325581395,62 C0.325581395,50.3484948 6.18643583,40.0658655 15.1208831,33.9393737 C13.1380147,30.5874875 12,26.6766425 12,22.5 C12,10.0735931 22.0735931,0 34.5,0 C46.9264069,0 57,10.0735931 57,22.5 C57,26.7477932 55.822882,30.7206558 53.7770461,34.1101876 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Client-4" sketch:type="MSArtboardGroup" transform="translate(-604.000000, -229.000000)">
+            <g id="popup" sketch:type="MSLayerGroup">
+                <g id="wokno" transform="translate(480.000000, 183.000000)">
+                    <g id="anonym-user" transform="translate(125.000000, 36.000000)">
+                        <circle id="Oval-254" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" sketch:type="MSShapeGroup" cx="35" cy="60" r="35"></circle>
+                        <g id="male80" transform="translate(0.674419, 0.000000)">
+                            <mask id="mask-2" sketch:name="Oval 255" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Oval-255" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                            <path d="M42.068683,58.7130463 C42.068683,58.7130463 47.7715946,53.0556204 49.0145638,45.4480556 C52.3581161,45.4480556 54.4234113,37.360213 51.0791569,34.5146111 C51.2192543,31.5191204 55.3770567,11 34.3255814,11 C13.2739305,11 17.4322597,31.5191204 17.5714792,34.5146111 C14.2275759,37.360213 16.29252,45.4480556 19.6362478,45.4480556 C20.8790415,53.0556204 26.5821286,58.7130463 26.5821286,58.7130463 C26.5821286,58.7130463 26.5378874,64.0608426 24.5970646,64.3702963 C18.3453505,65.3670926 -5,75.6855 -5,87 L34.3255814,97 L73.6511628,87 C73.6511628,75.6855 50.3056367,65.3670926 44.0537471,64.3702963 C42.1129243,64.0608426 42.068683,58.7130463 42.068683,58.7130463 Z" id="fill" fill="#737373" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                            <path d="M42.068683,58.7130463 C42.068683,58.7130463 47.7715946,53.0556204 49.0145638,45.4480556 C52.3581161,45.4480556 54.4234113,37.360213 51.0791569,34.5146111 C51.2192543,31.5191204 55.3770567,11 34.3255814,11 C13.2739305,11 17.4322597,31.5191204 17.5714792,34.5146111 C14.2275759,37.360213 16.29252,45.4480556 19.6362478,45.4480556 C20.8790415,53.0556204 26.5821286,58.7130463 26.5821286,58.7130463 C26.5821286,58.7130463 26.5378874,64.0608426 24.5970646,64.3702963 C18.3453505,65.3670926 -5,75.6855 -5,87 L34.3255814,97 L73.6511628,87 C73.6511628,75.6855 50.3056367,65.3670926 44.0537471,64.3702963 C42.1129243,64.0608426 42.068683,58.7130463 42.068683,58.7130463 Z" id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                            <text id="?" sketch:type="MSTextLayer" mask="url(#mask-2)" font-family="Roboto" font-size="19" font-weight="420" fill="#FFFFFF">
+                                <tspan x="30" y="41">?</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

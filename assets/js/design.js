@@ -1,26 +1,119 @@
 //Design page
 
-
+//"Global" variables for design page
 var designId = $('.design').data('id');
-// io.socket.request('/api/feedbacks');
+
+//Init idenifyPopup
+var identifyPopup= new IdentifyPopup();
 
 // Hide all feedback boxes (so useful comment, i know it :D)
 var hideAllFeedbackBoxes = function () {
 	$('.feedback-box').addClass('hidden');
 }
 
+//Show specifics feedback box
+var showFeedbackBox = function (feedbackId) {
+	$('.feedback-'+feedbackId).removeClass('hidden');
+}
+
+
+var sendFeedbackMessage = function(content, feedbackId) {
+	//Send the message
+	console.log('Odesílám odpověď do feedbacku');
+
+	var userId = getUserFromStorage();
+
+	console.log('content: ' + content);
+	console.log('feedbackId: ' + feedbackId);
+
+	//Create it
+	io.socket.post('/api/feedbackMessages/create', {content: content, designId: designId, feedbackId: feedbackId, userId: userId}, function (response) {
+		console.log(response);
+		// $contentInput.val('');
+		renderFeedbackMessages();
+	});
+};
+
+//Function to open feedback box
+var openFeedback = function() {
+	hideAllFeedbackBoxes();
+	var $feedback = $(this).parents('.feedback').first();
+	var $feedbackBox = $feedback.find('.feedback-box');
+	var feedbackId = $feedback.data('id');
+
+	$feedbackBox.toggleClass('hidden');
+	//console.log('clicked');
+
+	//You read it
+	$feedback.removeClass('unreaded');
+	var hash = 'readed-design' + '' +designId + '-feedback' + feedbackId;
+	if(typeof(Storage) !== "undefined") {// browser support localStorage/sessionStorage.
+		localStorage.setItem(hash, true);
+	}
+
+	return false;	
+};
+
+//Add feedback message to database
+var addFeedbackMessage = function() {
+	console.log('chci přidat zpravu');
+	//Variables
+	var $form = $(this).parents('.form').first();
+	var $contentInput = $form.find('.form-control');
+	var content = $contentInput.val();
+	// var designId = $form.data('designid');
+	var feedbackId = $form.data('feedbackid');
+	
+	$('.identify-popup .form').data('feedbackid', feedbackId);
+	$('.identify-popup .form').data('content', content);
+
+	//Show identify popup
+	identifyPopup.show(feedbackId);
+	
+	
+	return false;
+};
+
+
+var identifyUserByPopup = function() {
+	console.log('Chci identifikovat uživatele.');
+	var $form = $(this);
+	var email = $form.find('.form-control').val();
+	var feedbackId = $form.data('feedbackid');
+	var content = $form.data('content');
+
+
+	if (email) {
+		io.socket.post('/api/user/findOrCreateUser', {email: email}, function (user) {
+			//Save userId to local storage
+			setUserToStorage(user.id);
+
+			//Close identify popup
+			identifyPopup.close();
+
+			//Send message
+			sendFeedbackMessage(content, feedbackId);
+
+			//Clear feedback input
+			$('.feedback-'+feedbackId).find('form-msg .form-control').val('');
+		});
+	}
+
+
+	return false;
+};
+
+
 //Rerun jquery functions
 var rebuildFeedbackActions = function() {
 	//Open feedbackbox
-	$('.feedback .point').on('click', function(){
-		hideAllFeedbackBoxes();
-		var $feedback = $(this).parents('.feedback').first();
-		var $feedbackBox = $feedback.find('.feedback-box');
+	$('.feedback .point').on('click', openFeedback);
 
-		$feedbackBox.toggleClass('hidden');
-		console.log('clicked');
-		return false;	
-	});
+	//Add feedback message
+	$('.feedback .form-msg .btn').on('click', addFeedbackMessage);
+	
+	//Identify popup - set user
+	$('.identify-popup .form').on('submit', identifyUserByPopup);
 
 	// On focus small input => large it
 	$('.feedback-box .form-control').on('focus', function(){
@@ -39,41 +132,7 @@ var rebuildFeedbackActions = function() {
 			$form.addClass('form-small');
 		}
 	});
-
-	//Add feedback message
-	$('.feedback .form-msg .btn').on('click', function(){
-		console.log('chci přidat zpravu');
-		//Variables
-		var $form = $(this).parents('.form').first();
-		var $contentInput = $form.find('.form-control');
-		var content = $contentInput.val();
-		// var designId = $form.data('designid');
-		var feedbackId = $form.data('feedbackid');
-
-		//Send the message
-		console.log('Odesílám odpověď do feedbacku');
-
-		//Create it
-		io.socket.post('/api/feedbackMessages/create', {content: content, designId: designId, feedbackId: feedbackId}, function (response) {
-			console.log(response);
-			$contentInput.val('');
-			renderFeedbackMessages();
-		});
-		return false;
-	});
-}
-
-// var getUser = function(id) {
-
-// 	io.socket.get('/api/user?id='+id, function (user) {
-// 		// console.log(user);
-// 		return user;
-// 	});
-
-// 	return user;
-// }
-
-// console.log(getUser(1));
+};
 
 //Load messages
 var renderFeedbackMessages = function() {
@@ -91,7 +150,20 @@ var renderFeedbackMessages = function() {
 			for (var i = 0; i < messages.length; i++) {
 				var msg = messages[i];
 				// console.log(msg);
-				$otherMessages.append('<div class="message"><p>'+msg.content+'</p></div>');
+				$otherMessages.append('<div class="message message-'+msg.id+'"><p>'+msg.content+'</p><span class="badge user"></span></div>');
+				var $msg = $('.message-'+msg.id);
+
+				// console.log(msg);
+				//Get user who write it
+				io.socket.get('/api/user?id='+msg.userId, function (user) {
+					$msg.find('.user').text(user.email);
+				});
+
+			};
+			if (messages.length > 0) {
+				//Change button text
+				var $sendBtn = $msg.parents('.feedback').first().find('.btn span');
+				$sendBtn.text('Identify yourself');
 			};
 		});
 		
@@ -108,14 +180,13 @@ var renderFeedbacks = function () {
 		for (var i = 0; i < feedbacks.length; i++) {
 			var fdb = feedbacks[i];
 			$renderFeedbacks.append(
-				'<div class="feedback feedback-exist" data-id="'+fdb.id+'" style="top: '+fdb.top+'px; left: '+fdb.left+'px">' + 
+				'<div class="feedback feedback-exist feedback-'+fdb.id+'" data-id="'+fdb.id+'" style="top: '+fdb.top+'px; left: '+fdb.left+'px">' + 
 					'<span class="point">'+(i+1)+'</span>' +
 					'<div class="feedback-box hidden">' +
 						'<div class="feedback-messages">' +
 							'<div class="message">' +
 								'<p>'+fdb.content+'</p>' +
-								'<span class="badge">'+
-									'userId: <%= feedback.userId %>'+
+								'<span class="badge user">'+	
 								'</span>'+
 							'</div>'+
 							'<div class="other-messages">' +
@@ -131,8 +202,25 @@ var renderFeedbacks = function () {
 					'</div>' +
 				'</div>'
 			);
+			io.socket.get('/api/user?id='+fdb.userId, function (user) {
+				$renderFeedbacks.find('.message .user').text(user.email);
+			});
+			$('.feedback-add .point').text(feedbacks.length+1);
+			
+			var hash = 'readed-design' + '' +designId + '-feedback' + fdb.id;
+			if(typeof(Storage) !== "undefined") {// browser support localStorage/sessionStorage.
+				var result = localStorage.getItem(hash);
+				//console.log(result);
+				$renderFeedbacks.find('.feedback').addClass('unreaded');
+				if (result != null) {
+					//This point is readed
+					//console.log('readed'+fdb.id);
+					$('.feedback-'+fdb.id).removeClass('unreaded');
+				}
+			}
 		}
-		$('.feedback-add .point').text(feedbacks.length+1);
+
+
 		renderFeedbackMessages();
 		rebuildFeedbackActions();
 	});
@@ -140,11 +228,13 @@ var renderFeedbacks = function () {
 };
 renderFeedbacks();
 
+//Listening feedbacks api
 io.socket.on("feedbacks", function(event){
 	console.log('Změna ve "feedbacks"');
 	renderFeedbacks();
 });
 
+//Listening feedbackMessages api
 io.socket.on("feedbackmessages", function(event){
 	console.log('Změna ve "feedbackMessages"');
 	// renderFeedbackMessages();
@@ -155,7 +245,8 @@ io.socket.on("feedbackmessages", function(event){
 var $feedbackAdd = $('.feedback-add');
 var $feedbackAddForm = $feedbackAdd.find('.form');
 
-$('.design .image').on('click', function(){
+
+var addFeedbackPoint = function () {
 	hideAllFeedbackBoxes();
 	$feedbackAdd.find('.feedback-box').removeClass('hidden');
 	
@@ -185,10 +276,10 @@ $('.design .image').on('click', function(){
 	$feedbackAddForm.find('.form-control').focus();
 	
 	return false;
-});
+};
 
-//Create and send feedback
-$('.feedback-add .form .btn').on('click', function(){
+
+var sendFeedback = function() {
 	//Variables
 	var $form = $('.feedback-add .form');
 	var $contentInput = $form.find('.form-control');
@@ -197,28 +288,29 @@ $('.feedback-add .form .btn').on('click', function(){
 	var top = $form.data('top');
 	var left = $form.data('left');
 
-
 	console.log('Odesílám feedback');
-	// $.ajax({
- //        url: '/api/designs/addFeedback',
- //        data: {content: content, designId: designId, top: top, left: left},
- //        success: function (response) {
- //            console.log(response);
- //            hideAllFeedbackBoxes();
- //        }
- //    })
-	//{content: content, designId: designId, userId: 1, top : top, left: left}
-	// io.socket.post('/api/designs/addFeedback', {content: content, designId: designId, userId: 1, top: top, left: left}, function (response) {
+
+	//post
 	io.socket.post('/api/feedbacks/create', {content: content, designId: designId, userId: 1, top: top, left: left}, function (response) {
         console.log(response);
+        
         hideAllFeedbackBoxes();
+        showFeedbackBox(response.id);
+    	
     	renderFeedbacks();
     });
 
+	//Clear content input
 	$contentInput.val('');
 
 	return false;
-});
+};
+
+//On click at image => call function to add Point
+$('.design .image').on('click', addFeedbackPoint);
+
+//Create and send feedback
+$('.feedback-add .form .btn').on('click', sendFeedback);
 
 //Close Add feedback box on press ESC
 $(document).keyup(function(e) {
@@ -227,4 +319,8 @@ $(document).keyup(function(e) {
 		$feedbackAdd.hide();
 	}
 });
+
+
+
+
 

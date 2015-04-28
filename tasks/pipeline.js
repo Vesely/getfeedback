@@ -32,6 +32,8 @@ var jsFilesToInject = [
   
   'js/libs/jquery.iframe-transport.js',
   'js/libs/jquery.fileupload.js',
+  
+  'js/identify-popup.js',
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
