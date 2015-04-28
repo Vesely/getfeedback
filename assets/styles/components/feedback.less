@@ -21,6 +21,7 @@
 
 		cursor: pointer;
 
+
 		&:hover, 
 		&:focus {
 			// background: darken(@gf-blue, 5%);
@@ -31,6 +32,9 @@
 		&:active {
 			transform: translateY(1px);
 		}
+	}
+	&.unreaded .point {
+		background: @gf-red;
 	}
 	.feedback-box {
 		width: 258px;
