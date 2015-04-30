@@ -107,4 +107,97 @@
 			}
 		}
 	}
+	.backgrounds {
+		width: 100%;
+		.sky {
+			width: 100%;
+			.birds {
+				@top: 78px;
+				@left: 67px;
+				position: absolute;
+				top: @top;
+				left: @left;
+				@media (max-width: 1000px){
+					top: @top - 15px;
+					left: @left/1.4;
+				}
+				@media (max-width: 700px){
+					top: 40px;
+					left: 30px;
+				}
+			}
+			.cloud {
+				@top: 136px;
+				@left: 182px;
+				position: absolute;
+				top: @top;
+				left: @left;
+				@media (max-width: 1000px){
+					left: @left;
+				}
+				@media (max-width: 700px){
+					top: 150px;
+					display: none;
+					img {
+						width: 75px;
+					}
+				}
+			}
+			.cloud2 {
+				.anim;
+				@top: 100px;
+				@right: 199px;
+				position: absolute;
+				top: @top;
+				right: @right;
+				@media (max-width: 1000px){
+					right: @right/1.3;
+				}
+				@media (max-width: 900px){
+					right: @right/1.7;
+					top: @top - 40px;
+				}
+				@media (max-width: 700px){
+					top: 60px;
+					right: 30px;
+				}
+			}
+			.airship {
+				@top: 209px;
+				@right: 235px;
+				position: absolute;
+				top: @top;
+				right: @right;
+				@media (max-width: 1000px){
+					right: @right/1.3;
+				}
+				@media (max-width: 900px){
+					top: @top - 20px;
+					right: @right/1.5;
+				}
+				@media (max-width: 700px){
+					right: 70px;
+					img {
+						width: 77px;
+					}
+				}
+				@media (max-width: 550px){
+					display: none;
+				}
+			}
+		}
+		.buildings {
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			@media (max-height: 600px){
+				position: absolute;
+				top: 220px;
+				bottom: auto;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
 }
