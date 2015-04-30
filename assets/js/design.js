@@ -225,31 +225,16 @@ var renderFeedbackMessages = function() {
 
 					// console.log(msg);
 					//Get user who write it
-
-					// $msg.find('.user').text(msg.userId);
-					// io.socket.get('/api/user?id='+msg.userId, function (user) {
-					// 	$msg.find('.user').text(msg.userId+ ' - '+user.email);
-						
-					// 	var myUserId = getUserFromStorage();
-					// 	if(myUserId == msg.userId) {
-					// 		$msg.find('.user').addClass('its-me');
-					// 	}
-					// });
-
 					var userEmail = users[msg.userId];
 					$msg.find('.user').text(userEmail);
 					
+					//Am I author of this message?
 					var myUserId = getUserFromStorage();
 					if(myUserId == msg.userId) {
 						$msg.find('.user').addClass('its-me');
 					}
 				};
 				redrawFeedbackBtn();
-				// if (messages.length > 0) {
-				// 	//Change button text
-				// 	var $sendBtn = $msg.parents('.feedback').first().find('.btn span');
-				// 	$sendBtn.text('Identify yourself');
-				// };
 			});
 			
 		});
@@ -267,7 +252,7 @@ var renderFeedbacks = function () {
 		for (var i = 0; i < feedbacks.length; i++) {
 			var fdb = feedbacks[i];
 			$renderFeedbacks.append(
-				'<div class="feedback feedback-exist feedback-'+fdb.id+'" data-id="'+fdb.id+'" style="top: '+fdb.top+'px; left: '+fdb.left+'px">' + 
+				'<div class="feedback feedback-exist unreaded feedback-'+fdb.id+'" data-id="'+fdb.id+'" style="top: '+fdb.top+'px; left: '+fdb.left+'px">' + 
 					'<span class="point">'+(i+1)+'</span>' +
 					'<div class="feedback-box hidden">' +
 						'<div class="feedback-messages">' +
@@ -302,11 +287,10 @@ var renderFeedbacks = function () {
 			var hash = 'readed-design' + '' +designId + '-feedback' + fdb.id;
 			if(typeof(Storage) !== "undefined") {// browser support localStorage/sessionStorage.
 				var result = localStorage.getItem(hash);
-				//console.log(result);
-				$renderFeedbacks.find('.feedback').addClass('unreaded');
+				console.log(hash + ' = ' + result);
 				if (result != null) {
 					//This point is readed
-					//console.log('readed'+fdb.id);
+					console.log('readed //'+hash);
 					$('.feedback-'+fdb.id).removeClass('unreaded');
 				}
 			}
@@ -339,6 +323,9 @@ var $feedbackAddBox = $feedbackAdd.find('.feedback-box');
 var $feedbackAddForm = $feedbackAdd.find('.form');
 var $feedbackAddInput = $feedbackAddForm.find('.form-control');
 
+var addTopPosition = 0;
+var addLeftPosition = 0;
+
 var addFeedbackPoint = function () {
 	//Hide all feedback boxes
 	hideAllFeedbackBoxes();
@@ -369,6 +356,9 @@ var addFeedbackPoint = function () {
 	//Add datta attribudes with postion
 	$feedbackAddForm.attr('data-top', topInBox).attr('data-left', leftInBox);
 
+	addTopPosition = topInBox;
+	addLeftPosition = leftInBox;
+
 	//Focus the input
 	$feedbackAddForm.find('.form-control').focus();
 
@@ -379,6 +369,7 @@ var addFeedbackPoint = function () {
 };
 
 
+
 var sendFeedback = function() {
 	//Variables
 	var $form = $('.feedback-add .form');
@@ -386,14 +377,16 @@ var sendFeedback = function() {
 	var $contentInput = $form.find('.form-control');
 	var content = $contentInput.val();
 	var designId = $form.find('.design-id').val();
-	var top = $form.data('top');
-	var left = $form.data('left');
+	// var top = $form.data('top');
+	// var left = $form.data('left');
+	var top = addTopPosition;
+	var left = addLeftPosition;
 	var userId = getUserFromStorage();
 
 	console.log('Odesílám feedback');
 
-	console.log(top);
-	console.log(left);
+	// console.log('Top: '+top);
+	// console.log('Left: '+left);
 
 	if (!userId) {
 		//Show identify popup
