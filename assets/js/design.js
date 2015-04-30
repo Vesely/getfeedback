@@ -192,6 +192,15 @@ var rebuildFeedbackActions = function() {
 			$form.addClass('form-small');
 		}
 	});
+
+	$('.form-control').keypress(function(e) {
+		//Submiting message by press Shift+enter
+		if(e.which == 13 && e.shiftKey) {
+			console.log('shiftenter');
+			var $btn = $(this).parents('.form').first().find('.btn');
+			$btn.trigger('click');
+	    }
+	});
 };
 
 //Load messages
@@ -421,6 +430,7 @@ $(document).keyup(function(e) {
 	if (e.keyCode == 27) { //esc
 		$feedbackAdd.hide();
 	}
+
 });
 
 
