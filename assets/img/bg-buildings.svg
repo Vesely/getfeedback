@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1280px" height="603px" viewBox="0 0 1280 603" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12005) - http://www.bohemiancoding.com/sketch -->
+    <title>bg-buildings</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M31.1225676,31.1225676 C29.9503059,29.9503059 30.3383446,29.1889991 31.9755448,29.4202023 L145.195314,45.4089391 C146.838662,45.6410104 148.359858,47.167486 148.591061,48.8046862 L164.579798,162.024455 C164.811869,163.667803 164.049643,164.049643 162.877432,162.877432 L31.1225676,31.1225676 Z"></path>
+        <path id="path-3" d="M6.72184339,10.1974442 C6.72184339,8.54275637 8.0667418,7.20136686 9.71501391,7.20136686 L36.4787491,7.20136686 C38.1318315,7.20136686 38.5095084,8.13277786 37.3230956,9.2809751 L8.87066736,36.8169228 C7.68390465,37.9654587 6.72184339,37.5548738 6.72184339,35.9004537 L6.72184339,10.1974442 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="home" sketch:type="MSArtboardGroup" transform="translate(0.000000, -198.000000)">
+            <g id="background" sketch:type="MSLayerGroup" transform="translate(-51.000000, 78.000000)">
+                <g id="bg-buildings" transform="translate(0.000000, 121.000000)">
+                    <g id="Group" transform="translate(0.000000, 432.000000)" stroke="#737373" stroke-width="2" sketch:type="MSShapeGroup">
+                        <path d="M1.16825179,77 L1359.3327,77" id="Path-138" stroke-dasharray="15,22" opacity="0.249999985"></path>
+                        <path d="M21.1682518,52 L1379.3327,52" id="Path-139" stroke-dasharray="30,22" opacity="0.199999988"></path>
+                        <path d="M0.168251788,26 L1358.3327,26" id="Path-140" stroke-dasharray="5,15" opacity="0.150000006"></path>
+                        <path d="M20.1682518,1 L1378.3327,1" id="Path-141" stroke-dasharray="10,30" opacity="0.100000001"></path>
+                    </g>
+                    <g id="zem" transform="translate(23.000000, 527.000000)" sketch:type="MSShapeGroup">
+                        <rect stroke="#737373" stroke-width="2" x="18" y="0" width="1300" height="80"></rect>
+                        <rect id="shdw" fill="#DCDCDC" x="18" y="67" width="1300" height="11"></rect>
+                        <rect id="light" fill="#FFFFFF" x="18" y="2" width="1300" height="12"></rect>
+                        <rect id="fill" fill="#F7F7F7" x="18" y="4" width="1300" height="72"></rect>
+                        <path d="M0,26 L1335.60639,26" id="line" stroke="#737373" stroke-width="2" stroke-dasharray="10,10"></path>
+                    </g>
+                    <g id="building" transform="translate(70.000000, 305.000000)">
+                        <g id="Main" transform="translate(12.000000, 93.000000)" sketch:type="MSShapeGroup">
+                            <g id="main">
+                                <rect id="fill-2" fill="#F8F8F8" x="0" y="4" width="170" height="126"></rect>
+                                <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="170" height="130"></rect>
+                                <rect id="shdw" fill="#E1E1E1" x="1" y="5" width="168" height="4"></rect>
+                            </g>
+                            <g id="door" transform="translate(67.000000, 78.000000)">
+                                <rect id="Rectangle-18" fill="#FFFFFF" x="0" y="0" width="36" height="4"></rect>
+                                <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="1" y="0" width="34" height="52"></rect>
+                                <rect id="border-7" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="1" y="0" width="34" height="52"></rect>
+                                <circle id="Oval-23" stroke="#737373" stroke-linecap="round" cx="27" cy="27" r="2"></circle>
+                                <path d="M1,49 L34,49" id="Path-76" stroke="#737373" stroke-linecap="round"></path>
+                            </g>
+                            <g id="oknka" transform="translate(15.000000, 24.000000)">
+                                <g id="wokno" transform="translate(0.000000, 54.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 1.000000)" stroke="#737373">
+                                        <path d="M12,0 L12,31.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,20.3752508 L24.5082736,20.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,9.37525082 L24.5082736,9.37525082" id="Path-39"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="34" height="3"></rect>
+                                        <path d="M1,1 L33,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-2">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 1.000000)" stroke="#737373">
+                                        <path d="M12,0 L12,31.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,20.3752508 L24.5082736,20.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,9.37525082 L24.5082736,9.37525082" id="Path-39"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="34" height="3"></rect>
+                                        <path d="M1,1 L33,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-3" transform="translate(53.000000, 0.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 1.000000)" stroke="#737373">
+                                        <path d="M12,0 L12,31.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,20.3752508 L24.5082736,20.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,9.37525082 L24.5082736,9.37525082" id="Path-39"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="34" height="3"></rect>
+                                        <path d="M1,1 L33,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-4" transform="translate(107.000000, 0.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 1.000000)" stroke="#737373">
+                                        <path d="M12,0 L12,31.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,20.3752508 L24.5082736,20.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,9.37525082 L24.5082736,9.37525082" id="Path-39"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="34" height="3"></rect>
+                                        <path d="M1,1 L33,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-5" transform="translate(107.000000, 54.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 1.000000)" stroke="#737373">
+                                        <path d="M12,0 L12,31.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,20.3752508 L24.5082736,20.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,9.37525082 L24.5082736,9.37525082" id="Path-39"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="34" height="3"></rect>
+                                        <path d="M1,1 L33,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="komin" transform="translate(136.000000, 35.000000)" sketch:type="MSShapeGroup">
+                            <rect id="fill" fill="#F8F8F8" x="0" y="3" width="15" height="42"></rect>
+                            <rect id="border-4" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="15" height="42"></rect>
+                        </g>
+                        <g id="strecha">
+                            <mask id="mask-2" sketch:name="light" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="light" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(97.000000, 97.000000) rotate(-45.000000) translate(-97.000000, -97.000000) " xlink:href="#path-1"></use>
+                            <path d="M30.5902882,34.9015227 C29.4180265,33.729261 29.8060652,32.9679543 31.4432654,33.1991574 L144.663034,49.1878943 C146.306382,49.4199656 147.827578,50.9464412 148.058781,52.5836413 L164.047518,165.80341 C164.27959,167.446758 163.517363,167.828598 162.345153,166.656388 L30.5902882,34.9015227 Z" id="fill" fill="#F8F8F8" sketch:type="MSShapeGroup" mask="url(#mask-2)">
+                                <g transform="translate(97.000685, 100.246959) rotate(-45.000000) translate(-97.000685, -100.246959) "></g>
+                            </path>
+                            <path d="M30.5902882,30.9015227 C29.4180265,29.729261 29.8060652,28.9679543 31.4432654,29.1991574 L144.663034,45.1878943 C146.306382,45.4199656 147.827578,46.9464412 148.058781,48.5836413 L164.047518,161.80341 C164.27959,163.446758 163.517363,163.828598 162.345153,162.656388 L30.5902882,30.9015227 Z" id="border-5" stroke="#737373" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup" transform="translate(97.000685, 96.246959) rotate(-45.000000) translate(-97.000685, -96.246959) "></path>
+                        </g>
+                    </g>
+                    <g id="radnice" transform="translate(286.000000, 0.000000)" sketch:type="MSShapeGroup">
+                        <g id="Main" transform="translate(1.000000, 371.000000)">
+                            <g id="main">
+                                <rect id="fill-2" fill="#F8F8F8" x="0" y="1" width="260" height="156"></rect>
+                                <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="260" height="157"></rect>
+                            </g>
+                        </g>
+                        <g id="strecha-2" transform="translate(0.000000, 319.000000)">
+                            <rect id="shdw" fill="#E1E1E1" x="2" y="52" width="258" height="6"></rect>
+                            <path d="M13.2323643,2.90604928 C13.6563178,1.30108258 15.3449333,3.33066907e-16 17.0012712,3.33066907e-16 L244.998729,3.33066907e-16 C246.656285,3.33066907e-16 248.342593,1.29695827 248.767636,2.90604928 L261.232364,50.0939507 C261.656318,51.6989174 260.652812,53 259.001142,53 L2.998858,53 C1.34263446,53 0.342592749,51.7030417 0.76763566,50.0939507 L13.2323643,2.90604928 Z" id="fill" fill="#F8F8F8"></path>
+                            <rect id="Rectangle-140" fill="#FFFFFF" x="14" y="0" width="234" height="3"></rect>
+                            <path d="M13.2323643,2.90604928 C13.6563178,1.30108258 15.3449333,3.33066907e-16 17.0012712,3.33066907e-16 L244.998729,3.33066907e-16 C246.656285,3.33066907e-16 248.342593,1.29695827 248.767636,2.90604928 L261.232364,50.0939507 C261.656318,51.6989174 260.652812,53 259.001142,53 L2.998858,53 C1.34263446,53 0.342592749,51.7030417 0.76763566,50.0939507 L13.2323643,2.90604928 Z" id="border-15" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                        </g>
+                        <g id="tower" transform="translate(110.000000, 0.000000)">
+                            <g id="zabradli" transform="translate(15.000000, 202.000000)">
+                                <g id="ctverec" transform="translate(24.000000, 5.000000)">
+                                    <rect id="fill" fill="#F8F8F8" x="0" y="0" width="38" height="37"></rect>
+                                    <rect id="shdw" fill="#E1E1E1" x="1" y="0" width="36" height="2"></rect>
+                                    <rect id="border-14" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="38" height="37"></rect>
+                                </g>
+                                <g transform="translate(0.000000, 5.000000)" stroke-linecap="round" stroke-width="2" stroke="#737373">
+                                    <g id="left">
+                                        <path d="M1,25 L1,-2.84217094e-14" id="Path-176"></path>
+                                        <path d="M9,25 L9,-2.84217094e-14" id="Path-177"></path>
+                                        <path d="M17,25 L17,-2.84217094e-14" id="Path-178"></path>
+                                    </g>
+                                    <g id="right" transform="translate(68.000000, 0.000000)">
+                                        <path d="M1,25 L1,-2.84217094e-14" id="Path-181"></path>
+                                        <path d="M9,25 L9,-2.84217094e-14" id="Path-180"></path>
+                                        <path d="M17,25 L17,-2.84217094e-14" id="Path-179"></path>
+                                    </g>
+                                </g>
+                                <g id="vrh">
+                                    <rect id="fill" fill="#F8F8F8" x="0" y="0" width="86" height="4" rx="3"></rect>
+                                    <rect id="light" fill="#FFFFFF" x="1" y="2" width="84" height="1"></rect>
+                                    <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="1" width="86" height="4" rx="3"></rect>
+                                </g>
+                            </g>
+                            <g id="main" transform="translate(16.000000, 213.000000)">
+                                <g id="wall">
+                                    <path d="M1.9935649,16 C0.886523545,16 0,16.8991945 0,18.008407 L0,315 L84,315 L84,18.008407 C84,16.8979562 83.1074506,16 82.0064351,16 L59.506831,16 C58.3993108,16 56.8662799,15.3647915 56.0897512,14.5882629 L43.9071288,2.40564049 C43.127448,1.62595959 41.8601832,1.62911184 41.0836546,2.40564049 L28.9010322,14.5882629 C28.1213513,15.3679438 26.596838,16 25.4886879,16 L1.9935649,16 Z" id="fill" fill="#F8F8F8"></path>
+                                    <path d="M1.9935649,16 C0.886523545,16 0,16.8991945 0,18.008407 L0,315 L84,315 L84,18.008407 C84,16.8979562 83.1074506,16 82.0064351,16 L59.506831,16 C58.3993108,16 56.8662799,15.3647915 56.0897512,14.5882629 L43.9071288,2.40564049 C43.127448,1.62595959 41.8601832,1.62911184 41.0836546,2.40564049 L28.9010322,14.5882629 C28.1213513,15.3679438 26.596838,16 25.4886879,16 L1.9935649,16 Z" id="border-17" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                </g>
+                                <g id="time" transform="translate(17.000000, 31.000000)">
+                                    <g id="border">
+                                        <circle id="shdw" fill="#E1E1E1" cx="25" cy="26" r="25"></circle>
+                                        <circle id="border-22" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#E0E0E0" cx="25" cy="24" r="24"></circle>
+                                        <circle id="border-16" fill="#FFFFFF" cx="25" cy="24" r="17"></circle>
+                                        <circle id="border-21" fill="#FFFFFF" cx="25" cy="24" r="17"></circle>
+                                    </g>
+                                    <circle id="Oval-36" fill="#737373" cx="25" cy="24" r="3"></circle>
+                                    <g id="rucickx" transform="translate(24.000000, 7.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M1,15 L1,1.13686838e-13" id="Path-198"></path>
+                                        <path d="M1.69669914,18.1966991 L8.06066017,24.5606602" id="Path-199"></path>
+                                    </g>
+                                </g>
+                                <g id="door" transform="translate(12.000000, 228.000000)">
+                                    <rect id="fill" fill="#FFFFFF" x="0" y="1" width="60" height="88"></rect>
+                                    <rect id="border-23" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="60" height="87"></rect>
+                                    <path d="M30,77 L30,-1.42108547e-14" id="Path-200" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M1,84 L59,84" id="Path-82" stroke="#737373" stroke-linecap="round"></path>
+                                    <path d="M1,81 L59,81" id="Path-83" stroke="#737373" stroke-linecap="round"></path>
+                                    <path d="M1,78 L59,78" id="Path-84" stroke="#737373" stroke-linecap="round"></path>
+                                    <path d="M34.9391686,50.4334731 L39.8468281,50.4334731" id="Path-204" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M19.9391686,50.4334731 L24.8468281,50.4334731" id="Path-205" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                </g>
+                                <g id="balkon" transform="translate(7.000000, 106.000000)">
+                                    <rect id="shdw" fill="#E1E1E1" x="0" y="50" width="70" height="7" rx="7"></rect>
+                                    <g id="spodek" transform="translate(1.000000, 50.000000)">
+                                        <rect id="fill" fill="#F8F8F8" x="0" y="0" width="68" height="4" rx="3"></rect>
+                                        <rect id="light" fill="#FFFFFF" x="1" y="2" width="66" height="1"></rect>
+                                        <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="1" width="68" height="4" rx="3"></rect>
+                                    </g>
+                                    <g id="doors" transform="translate(15.000000, 0.000000)">
+                                        <path d="M0,20.126867 C0,9.07873202 8.95187636,0.12244898 20,0.12244898 L20,0.12244898 C31.045695,0.12244898 40,9.08279281 40,20.126867 L40,51.0612245 L0,51.0612245 L0,20.126867 Z" id="fill" fill="#FFFFFF"></path>
+                                        <path d="M0,20.126867 C0,9.07873202 8.95187636,0.12244898 20,0.12244898 L20,0.12244898 C31.045695,0.12244898 40,9.08279281 40,20.126867 L40,51.0612245 L0,51.0612245 L0,20.126867 Z" id="border-24" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M20.1518285,49.7307846 L20.1518285,0.763661985" id="Path-210" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                        <circle id="Oval-38" stroke="#737373" stroke-linecap="round" cx="26" cy="28" r="2"></circle>
+                                        <circle id="Oval-39" stroke="#737373" stroke-linecap="round" cx="14" cy="28" r="2"></circle>
+                                    </g>
+                                    <g id="zabradli" transform="translate(4.000000, 34.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M1,16 L1,6.57252031e-14" id="Path-211"></path>
+                                        <path d="M11,16 L11,6.57252031e-14" id="Path-212"></path>
+                                        <path d="M21,16 L21,6.57252031e-14" id="Path-213"></path>
+                                        <path d="M41,16 L41,6.57252031e-14" id="Path-215"></path>
+                                        <path d="M51,16 L51,6.57252031e-14" id="Path-216"></path>
+                                        <path d="M61,16 L61,6.57252031e-14" id="Path-217"></path>
+                                        <path d="M0.984092307,4.9117396 L61.0768347,4.9117396" id="Path-218"></path>
+                                        <path d="M0.984092307,10.9117396 L61.0768347,10.9117396" id="Path-219"></path>
+                                    </g>
+                                </g>
+                                <g id="okno" transform="translate(32.000000, 187.000000)">
+                                    <circle id="Oval-40" fill="#FFFFFF" cx="10" cy="10" r="10"></circle>
+                                    <circle id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" cx="10" cy="10" r="10"></circle>
+                                    <path d="M10.0991197,0.828424594 L10.0991197,19.4081656" id="Path-219" stroke="#737373" stroke-linecap="round"></path>
+                                    <path d="M10.0991197,0.828424594 L10.0991197,19.4081656" id="Path-220" stroke="#737373" stroke-linecap="round" transform="translate(10.099120, 10.118295) rotate(-270.000000) translate(-10.099120, -10.118295) "></path>
+                                </g>
+                            </g>
+                            <g id="washington" transform="translate(23.000000, 0.000000)">
+                                <g id="main" transform="translate(0.000000, 132.000000)">
+                                    <rect id="spodek-fill" fill="#F8F8F8" x="0" y="59" width="70" height="11"></rect>
+                                    <rect id="vrh-fill" fill="#F8F8F8" x="0" y="0" width="70" height="8"></rect>
+                                    <rect id="shdw" fill="#E1E1E1" x="0" y="60" width="70" height="1"></rect>
+                                    <rect id="shdw-2" fill="#E1E1E1" x="0" y="1" width="70" height="2"></rect>
+                                    <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="70" height="71"></rect>
+                                </g>
+                                <g id="koupla-one" transform="translate(0.000000, 90.000000)">
+                                    <path d="M51.9575294,0.999998721 C62.7174822,7.82364298 70,20.9398654 70,36 L0,36 C0,20.9398654 7.28251778,7.82364298 18.0424706,0.999998721 L51.9575307,1 Z" id="fill" fill="#F8F8F8"></path>
+                                    <rect id="shdw" fill="#E1E1E1" x="15" y="2" width="40" height="1"></rect>
+                                    <path d="M51.9575294,0.999998721 C62.7174822,7.82364298 70,20.9398654 70,36 L0,36 C0,20.9398654 7.28251778,7.82364298 18.0424706,0.999998721 L51.9575307,1 Z" id="border-18" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                </g>
+                                <g id="rantl-4" transform="translate(13.000000, 87.000000)">
+                                    <rect id="fill" fill="#F8F8F8" x="6" y="0" width="32" height="3"></rect>
+                                    <rect id="light-4" fill="#FFFFFF" x="0" y="1" width="84" height="1"></rect>
+                                    <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="5" y="0" width="34" height="4" rx="3"></rect>
+                                </g>
+                                <g id="mrize-small" transform="translate(20.000000, 65.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                    <path d="M15.4541629,21.4587484 L15.4541629,0.634616649" id="Path-189"></path>
+                                    <path d="M23.4541629,21.4587484 L23.4541629,0.634616649" id="Path-190"></path>
+                                    <path d="M29.4541629,21.4587484 L29.4541629,0.634616649" id="Path-191"></path>
+                                    <path d="M7.45416294,21.4587484 L7.45416294,0.634616649" id="Path-192"></path>
+                                    <path d="M1.45416294,21.4587484 L1.45416294,0.634616649" id="Path-193"></path>
+                                </g>
+                                <g id="rantl-5" transform="translate(13.000000, 64.000000)">
+                                    <rect id="fill" fill="#F8F8F8" x="6" y="0" width="32" height="3"></rect>
+                                    <rect id="light-4" fill="#FFFFFF" x="0" y="1" width="84" height="1"></rect>
+                                    <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="5" y="0" width="34" height="4" rx="3"></rect>
+                                </g>
+                                <g id="Kopula-two" transform="translate(20.000000, 48.000000)">
+                                    <path d="M22.2675135,0.999999269 C26.8789213,3.92441829 30,9.54565596 30,15.9999987 L30,15.9999987 L9.93332974e-31,15.9999987 C2.03314874e-15,9.54565596 3.12107866,3.92441829 7.73248655,0.999999269 L22.2675135,0.999999269 Z" id="fill" fill="#F8F8F8"></path>
+                                    <rect id="Rectangle-180" fill="#E1E1E1" x="6" y="2" width="18" height="1"></rect>
+                                    <path d="M22.2675135,0.999999269 C26.8789213,3.92441829 30,9.54565596 30,15.9999987 L30,15.9999987 L9.93332974e-31,15.9999987 C2.03314874e-15,9.54565596 3.12107866,3.92441829 7.73248655,0.999999269 L22.2675135,0.999999269 Z" id="border-19" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                </g>
+                                <g id="rantl-6" transform="translate(26.000000, 45.000000)">
+                                    <rect id="fill" fill="#F8F8F8" x="1" y="0" width="17" height="3"></rect>
+                                    <rect id="light-4" fill="#FFFFFF" x="0" y="1" width="17" height="1"></rect>
+                                    <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="18" height="4" rx="3"></rect>
+                                </g>
+                                <g id="mrize-top" transform="translate(26.000000, 35.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                    <path d="M8.97119946,9.10872839 L8.97119946,0.12182818" id="Path-194"></path>
+                                    <path d="M15.9711995,9.10872839 L15.9711995,0.12182818" id="Path-195"></path>
+                                    <path d="M1.97119946,9.10872839 L1.97119946,0.12182818" id="Path-196"></path>
+                                </g>
+                                <g id="rantl-7" transform="translate(26.000000, 32.000000)">
+                                    <rect id="fill" fill="#F8F8F8" x="1" y="0" width="17" height="3"></rect>
+                                    <rect id="light-4" fill="#FFFFFF" x="0" y="1" width="17" height="1"></rect>
+                                    <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="18" height="4" rx="3"></rect>
+                                </g>
+                                <g id="kopulka" transform="translate(28.000000, 24.000000)">
+                                    <path d="M10.3915063,0.999998977 C12.5434966,2.36472785 14,4.9879721 14,7.99999872 L14,7.99999872 L0,7.99999872 C0,4.9879721 1.45650337,2.36472785 3.60849372,0.999998977 L10.3915063,0.999998977 Z" id="fill" fill="#F8F8F8"></path>
+                                    <rect id="Rectangle-185" fill="#D8D8D8" x="2" y="2" width="10" height="1"></rect>
+                                    <path d="M10.3915063,0.999998977 C12.5434966,2.36472785 14,4.9879721 14,7.99999872 L14,7.99999872 L0,7.99999872 C0,4.9879721 1.45650337,2.36472785 3.60849372,0.999998977 L10.3915063,0.999998977 Z" id="border-20" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                </g>
+                                <g id="rantl-8" transform="translate(30.000000, 21.000000)">
+                                    <rect id="fill" fill="#F8F8F8" x="1" y="0" width="8" height="3"></rect>
+                                    <rect id="light-4" fill="#FFFFFF" x="0" y="1" width="9" height="1"></rect>
+                                    <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="1" y="0" width="8" height="4" rx="3"></rect>
+                                </g>
+                                <path d="M35.1135534,20.1524416 L35.1135534,0.676637003" id="Path-197" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                            </g>
+                            <g id="mrize" transform="translate(26.000000, 140.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                <path d="M32.4143285,0.835239362 L32.4143285,46.8307261" id="Path-182"></path>
+                                <path d="M18.4143285,0.835239362 L18.4143285,46.8307261" id="Path-183"></path>
+                                <path d="M46.4143285,0.835239362 L46.4143285,46.8307261" id="Path-184"></path>
+                                <path d="M56.4143285,0.835239362 L56.4143285,46.8307261" id="Path-185"></path>
+                                <path d="M63.4143285,0.835239362 L63.4143285,46.8307261" id="Path-188"></path>
+                                <path d="M8.41432846,0.835239362 L8.41432846,46.8307261" id="Path-186"></path>
+                                <path d="M1.41432846,0.835239362 L1.41432846,46.8307261" id="Path-187"></path>
+                            </g>
+                            <g id="rantl" transform="translate(17.000000, 187.000000)">
+                                <rect id="fill" fill="#F8F8F8" x="5" y="0" width="72" height="3"></rect>
+                                <rect id="light-3" fill="#FFFFFF" x="0" y="1" width="84" height="1"></rect>
+                                <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="4" y="0" width="74" height="4" rx="3"></rect>
+                            </g>
+                            <g id="rantl-2" transform="translate(16.000000, 140.000000)">
+                                <rect id="fill" fill="#F8F8F8" x="6" y="0" width="72" height="3"></rect>
+                                <rect id="light-4" fill="#FFFFFF" x="0" y="1" width="84" height="1"></rect>
+                                <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="5" y="0" width="74" height="4" rx="3"></rect>
+                            </g>
+                            <g id="rantl-3" transform="translate(0.000000, 125.000000)">
+                                <rect id="fill" fill="#F8F8F8" x="20" y="0" width="76" height="6" rx="3"></rect>
+                                <rect id="light-5" fill="#FFFFFF" x="0" y="2" width="84" height="1"></rect>
+                                <rect id="border-13" stroke="#737373" stroke-width="2" stroke-linecap="round" x="20" y="1" width="76" height="6" rx="3"></rect>
+                            </g>
+                        </g>
+                        <g id="okna" transform="translate(11.000000, 400.000000)" stroke="#737373">
+                            <g id="oknka" transform="translate(0.000000, 64.000000)">
+                                <g id="wokno">
+                                    <rect id="window" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="38" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 0.000000)">
+                                        <path d="M12,0 L12,37.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,25.3752508 L24.5082736,25.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,12.3752508 L24.5082736,12.3752508" id="Path-39"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="oknka-2" transform="translate(36.000000, 64.000000)">
+                                <g id="wokno">
+                                    <rect id="window" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="38" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 0.000000)">
+                                        <path d="M12,0 L12,37.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,25.3752508 L24.5082736,25.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,12.3752508 L24.5082736,12.3752508" id="Path-39"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="oknka-3" transform="translate(72.000000, 64.000000)">
+                                <g id="wokno">
+                                    <rect id="window" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="38" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 0.000000)">
+                                        <path d="M12,0 L12,37.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,25.3752508 L24.5082736,25.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,12.3752508 L24.5082736,12.3752508" id="Path-39"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="oknka-6">
+                                <g id="wokno">
+                                    <rect id="window" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="38" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 0.000000)">
+                                        <path d="M12,0 L12,37.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,25.3752508 L24.5082736,25.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,12.3752508 L24.5082736,12.3752508" id="Path-39"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="oknka-5" transform="translate(36.000000, 0.000000)">
+                                <g id="wokno">
+                                    <rect id="window" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="38" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 0.000000)">
+                                        <path d="M12,0 L12,37.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,25.3752508 L24.5082736,25.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,12.3752508 L24.5082736,12.3752508" id="Path-39"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="oknka-4" transform="translate(72.000000, 0.000000)">
+                                <g id="wokno">
+                                    <rect id="window" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="38" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 0.000000)">
+                                        <path d="M12,0 L12,37.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,25.3752508 L24.5082736,25.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,12.3752508 L24.5082736,12.3752508" id="Path-39"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="oknka-7" transform="translate(207.000000, 0.000000)">
+                                <g id="wokno">
+                                    <rect id="window" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="38" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 0.000000)">
+                                        <path d="M12,0 L12,37.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,25.3752508 L24.5082736,25.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,12.3752508 L24.5082736,12.3752508" id="Path-39"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="oknka-8" transform="translate(207.000000, 63.000000)">
+                                <g id="wokno">
+                                    <rect id="window" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="24" height="38" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 0.000000)">
+                                        <path d="M12,0 L12,37.0521474" id="Path-37" stroke-width="2" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,25.3752508 L24.5082736,25.3752508" id="Path-38" stroke-linecap="round"></path>
+                                        <path d="M0.345212316,12.3752508 L24.5082736,12.3752508" id="Path-39"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="flat" transform="translate(961.000000, 283.000000)" sketch:type="MSShapeGroup">
+                        <g id="Main">
+                            <g id="main" transform="translate(5.000000, 8.000000)">
+                                <rect id="fill-2" fill="#F8F8F8" x="0" y="1" width="154" height="237"></rect>
+                                <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="154" height="237"></rect>
+                                <rect id="shdw" fill="#E1E1E1" x="1" y="5" width="152" height="4"></rect>
+                            </g>
+                            <g id="door" transform="translate(62.000000, 189.000000)">
+                                <rect id="Rectangle-18" fill="#FFFFFF" x="2" y="4" width="36" height="4"></rect>
+                                <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="0" y="0" width="40" height="56"></rect>
+                                <path d="M0,53 L39,53" id="Path-76" stroke="#737373" stroke-linecap="round"></path>
+                                <path d="M0,50 L39,50" id="Path-81" stroke="#737373" stroke-linecap="round"></path>
+                                <path d="M20,1 L20,49" id="Path-98" stroke="#737373" stroke-linecap="round"></path>
+                                <path d="M23.7578291,25.9571642 L27.2351673,25.9571642" id="klika" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                <path d="M12.7578291,25.9571642 L16.2351673,25.9571642" id="klika-2" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                            </g>
+                            <g id="oknka" transform="translate(19.000000, 31.000000)">
+                                <g id="wokno-4" transform="translate(96.000000, 108.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-7" transform="translate(96.000000, 54.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-8" transform="translate(96.000000, 162.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-6" transform="translate(0.000000, 108.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-10" transform="translate(0.000000, 54.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-12" transform="translate(48.000000, 108.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-11" transform="translate(48.000000, 54.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-15" transform="translate(96.000000, 0.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-14">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-13" transform="translate(48.000000, 0.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                                <g id="wokno-9" transform="translate(0.000000, 162.000000)">
+                                    <rect id="window" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="5" y="0" width="20" height="32" rx="2"></rect>
+                                    <g id="pricky" transform="translate(5.000000, 14.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                        <path d="M0.345212316,1.37525082 L19.5082736,1.37525082" id="Path-38"></path>
+                                    </g>
+                                    <g id="paraper" transform="translate(0.000000, 31.000000)">
+                                        <rect id="shadow" fill="#E1E1E1" x="0" y="1" width="30" height="3"></rect>
+                                        <path d="M1,1 L29,1" id="parapet" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="strecha">
+                                <rect id="fill" fill="#F8F8F8" x="0" y="0" width="164" height="12" rx="3"></rect>
+                                <rect id="light" fill="#FFFFFF" x="0" y="0" width="164" height="3"></rect>
+                                <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="164" height="12" rx="3"></rect>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="strom" transform="translate(610.000000, 435.000000)" sketch:type="MSShapeGroup">
+                        <g id="koruna">
+                            <ellipse id="shafow" fill="#E1E1E1" cx="29.5" cy="33" rx="29.5" ry="27"></ellipse>
+                            <ellipse id="light" fill="#FFFFFF" cx="29.5" cy="27" rx="29.5" ry="27"></ellipse>
+                            <path d="M29.5,57 C45.2401154,57 58,45.3594035 58,31 C58,16.6405965 45.2401154,5 29.5,5 C13.7598846,5 1,16.6405965 1,31 C1,45.3594035 13.7598846,57 29.5,57 Z" id="fill" fill="#F8F8F8"></path>
+                            <circle id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" cx="30" cy="31" r="30"></circle>
+                        </g>
+                        <path d="M30,30.0195312 L30,92.6995316" id="Path-31" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M30.0076425,41.6493597 L43.049493,28.6075093" id="Path-32" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M22.9289322,51 L30,43.9289322" id="Path-33" stroke="#737373" stroke-width="2" stroke-linecap="round" transform="translate(26.464466, 47.464466) scale(-1, 1) translate(-26.464466, -47.464466) "></path>
+                    </g>
+                    <g id="Topol" transform="translate(55.000000, 377.000000)" sketch:type="MSShapeGroup">
+                        <rect id="light" fill="#FFFFFF" x="0" y="0" width="37" height="117" rx="32"></rect>
+                        <rect id="light-2" fill="#E1E1E1" x="0" y="29" width="37" height="87" rx="32"></rect>
+                        <rect id="border-12" fill="#F8F8F8" x="0" y="4" width="37" height="109" rx="32"></rect>
+                        <rect id="border-11" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="37" height="117" rx="32"></rect>
+                        <g id="koren" transform="translate(10.000000, 18.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                            <path d="M8,0.01953125 L8,132.699532" id="Path-31"></path>
+                            <path d="M0.928932188,84 L8,76.9289322" id="Path-34" transform="translate(4.464466, 80.464466) scale(-1, 1) translate(-4.464466, -80.464466) "></path>
+                            <path d="M7.92893219,74 L15,66.9289322" id="Path-41"></path>
+                            <path d="M7.92893219,54 L15,46.9289322" id="Path-42"></path>
+                            <path d="M7.92893219,34 L15,26.9289322" id="Path-43"></path>
+                            <path d="M7.92893219,14 L15,6.92893219" id="Path-44"></path>
+                            <path d="M0.928932188,64 L8,56.9289322" id="Path-35" transform="translate(4.464466, 60.464466) scale(-1, 1) translate(-4.464466, -60.464466) "></path>
+                            <path d="M0.928932188,44 L8,36.9289322" id="Path-36" transform="translate(4.464466, 40.464466) scale(-1, 1) translate(-4.464466, -40.464466) "></path>
+                            <path d="M0.928932188,24 L8,16.9289322" id="Path-40" transform="translate(4.464466, 20.464466) scale(-1, 1) translate(-4.464466, -20.464466) "></path>
+                        </g>
+                    </g>
+                    <g id="plot" transform="translate(868.000000, 499.000000)" stroke-width="2" stroke="#737373" stroke-linecap="round" sketch:type="MSShapeGroup">
+                        <path d="M91.9375,0.6640625 L91.9375,28.6640625"></path>
+                        <path d="M85.9375,0.6640625 L85.9375,28.6640625" id="plot-2"></path>
+                        <path d="M79.9375,0.6640625 L79.9375,28.6640625" id="plot-3"></path>
+                        <path d="M73.9375,0.6640625 L73.9375,28.6640625" id="plot-4"></path>
+                        <path d="M67.9375,0.6640625 L67.9375,28.6640625" id="plot-5"></path>
+                        <path d="M61.9375,0.6640625 L61.9375,28.6640625" id="plot-6"></path>
+                        <path d="M55.9375,0.6640625 L55.9375,28.6640625" id="plot-7"></path>
+                        <path d="M48.9375,0.6640625 L48.9375,28.6640625" id="plot-8"></path>
+                        <path d="M41.9375,0.6640625 L41.9375,28.6640625" id="plot-9"></path>
+                        <path d="M34.9375,0.6640625 L34.9375,28.6640625" id="plot-10"></path>
+                        <path d="M28.9375,0.6640625 L28.9375,28.6640625" id="plot-11"></path>
+                        <path d="M21.9375,0.6640625 L21.9375,28.6640625" id="plot-12"></path>
+                        <path d="M14.9375,0.6640625 L14.9375,28.6640625" id="plot-13"></path>
+                        <path d="M8.9375,0.6640625 L8.9375,28.6640625" id="plot-14"></path>
+                        <path d="M1.9375,0.6640625 L1.9375,28.6640625" id="plot-15"></path>
+                        <path d="M97.0569421,12.1141317 L1.84702785,12.1141317" id="Path-67"></path>
+                        <path d="M97.0569421,20.1141317 L1.84702785,20.1141317" id="Path-68"></path>
+                    </g>
+                    <g id="candy" transform="translate(691.000000, 413.000000)" sketch:type="MSShapeGroup">
+                        <g id="main" transform="translate(10.000000, 25.000000)">
+                            <rect id="fil" fill="#F8F8F8" x="0" y="0" width="170" height="90"></rect>
+                            <rect id="border-6" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="0" width="170" height="90"></rect>
+                        </g>
+                        <g id="door-2" transform="translate(25.000000, 63.000000)" stroke="#737373" stroke-linecap="round">
+                            <rect id="border" stroke-width="2" fill="#FFFFFF" x="0" y="0" width="31" height="52"></rect>
+                            <path d="M25.390625,22.7773438 L25.390625,31.9354426" id="Path-74" stroke-width="2"></path>
+                            <path d="M0,49 L31,49" id="Path-75"></path>
+                        </g>
+                        <g id="vyloha" transform="translate(70.000000, 63.000000)">
+                            <rect id="light" fill="#FFFFFF" x="2" y="29" width="92" height="3"></rect>
+                            <rect id="Rectangle-55" stroke="#737373" stroke-width="2" stroke-linecap="round" x="3" y="0" width="90" height="41"></rect>
+                            <rect id="shdw" fill="#E1E1E1" x="2" y="42" width="92" height="3"></rect>
+                            <rect id="Rectangle-56" stroke="#737373" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" x="3" y="11" width="90" height="17"></rect>
+                            <g id="clona" stroke="#737373" stroke-width="2" stroke-linecap="round">
+                                <rect id="Rectangle-41" fill="#FFFFFF" x="0" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-42" fill="#F7F7F7" x="6" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-43" fill="#FFFFFF" x="12" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-44" fill="#F7F7F7" x="18" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-45" fill="#FFFFFF" x="24" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-46" fill="#F7F7F7" x="30" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-47" fill="#FFFFFF" x="36" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-48" fill="#F7F7F7" x="42" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-49" fill="#FFFFFF" x="48" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-50" fill="#F7F7F7" x="54" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-51" fill="#FFFFFF" x="60" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-52" fill="#F7F7F7" x="66" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-53" fill="#FFFFFF" x="72" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-54" fill="#F7F7F7" x="78" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-55" fill="#FFFFFF" x="84" y="0" width="6" height="14"></rect>
+                                <rect id="Rectangle-56" fill="#F7F7F7" x="90" y="0" width="6" height="14"></rect>
+                            </g>
+                        </g>
+                        <g id="strecha">
+                            <path d="M13.9689893,5.81809604 C14.5384008,4.26170457 16.3351515,3 18.0006095,3 L171.999391,3 C173.656581,3 175.461231,4.26069827 176.031011,5.81809604 L188.968989,41.181904 C189.538401,42.7382954 188.659277,44 186.996401,44 L3.00359869,44 C1.34475694,44 0.461231073,42.7393017 1.03101075,41.181904 L13.9689893,5.81809604 Z" id="fil" fill="#F8F8F8"></path>
+                            <rect id="Rectangle-60" fill="#E1E1E1" x="11" y="43" width="168" height="6"></rect>
+                            <path d="M14.0331223,2.83617447 C14.5671141,1.26979856 16.3351515,0 18.0006095,0 L171.999391,0 C173.656581,0 175.432744,1.26938248 175.966878,2.83617447 L189.033122,41.1638255 C189.567114,42.7302014 188.659277,44 186.996401,44 L3.00359869,44 C1.34475694,44 0.432744026,42.7306175 0.966877659,41.1638255 L14.0331223,2.83617447 Z" id="border-8" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                        </g>
+                    </g>
+                    <g id="koš" transform="translate(672.000000, 503.000000)" stroke="#737373" stroke-linecap="round" sketch:type="MSShapeGroup">
+                        <rect id="Rectangle-61" stroke-width="2" fill="#F7F7F7" x="4" y="4" width="16" height="21"></rect>
+                        <path d="M0.899360737,4 L23.0898826,4" id="Path-77" stroke-width="2"></path>
+                        <rect id="Rectangle-62" stroke-width="2" x="8" y="0" width="8" height="4"></rect>
+                        <path d="M8.2406325,19.8192134 L8.2406325,9.56790219" id="Path-78"></path>
+                        <path d="M12.2406325,19.8192134 L12.2406325,9.56790219" id="Path-79"></path>
+                        <path d="M16.2406325,19.8192134 L16.2406325,9.56790219" id="Path-80"></path>
+                    </g>
+                    <g id="koš-2" transform="translate(255.000000, 503.000000)" stroke="#737373" stroke-linecap="round" sketch:type="MSShapeGroup">
+                        <rect id="Rectangle-61" stroke-width="2" fill="#F7F7F7" x="4" y="4" width="16" height="21"></rect>
+                        <path d="M0.899360737,4 L23.0898826,4" id="Path-77" stroke-width="2"></path>
+                        <rect id="Rectangle-62" stroke-width="2" x="8" y="0" width="8" height="4"></rect>
+                        <path d="M8.2406325,19.8192134 L8.2406325,9.56790219" id="Path-78"></path>
+                        <path d="M12.2406325,19.8192134 L12.2406325,9.56790219" id="Path-79"></path>
+                        <path d="M16.2406325,19.8192134 L16.2406325,9.56790219" id="Path-80"></path>
+                    </g>
+                    <g id="watter" transform="translate(1272.000000, 381.000000)">
+                        <g id="nohy" transform="translate(0.000000, 68.000000)" stroke="#737373" sketch:type="MSShapeGroup" stroke-linecap="round">
+                            <path d="M46,79 L40,0" id="Path-108" stroke-width="2"></path>
+                            <path d="M6,79 L0,0" id="Path-109" stroke-width="2" transform="translate(3.000000, 39.500000) scale(-1, 1) translate(-3.000000, -39.500000) "></path>
+                            <path d="M0.679105718,78.7091423 L42.69626,40.0260971 L6.79812168,2.1296875" id="Path-110"></path>
+                            <path d="M3.67910572,78.7091423 L45.69626,40.0260971 L9.79812168,2.1296875" id="Path-111" transform="translate(24.687683, 40.419415) scale(-1, 1) translate(-24.687683, -40.419415) "></path>
+                            <path d="M3.69081347,39.9365912 L42.6187794,39.9365912" id="Path-112" stroke-width="2"></path>
+                        </g>
+                        <g id="nadrz" transform="translate(4.000000, 21.000000)" sketch:type="MSShapeGroup">
+                            <rect id="fill" fill="#F8F8F8" x="0" y="0" width="38" height="47" rx="3"></rect>
+                            <rect id="shdw" fill="#E1E1E1" x="1" y="3" width="37" height="3"></rect>
+                            <rect id="shdw" fill="#E1E1E1" x="0" y="45" width="38" height="3"></rect>
+                            <rect id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" x="0" y="1" width="38" height="47" rx="3"></rect>
+                        </g>
+                        <g id="strecha" transform="translate(1.000000, 0.000000)">
+                            <mask id="mask-4" sketch:name="ligeht" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="ligeht" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(22.221843, 22.201367) rotate(45.000000) translate(-22.221843, -22.201367) " xlink:href="#path-3"></use>
+                            <path d="M6.72184339,13.1974442 C6.72184339,11.5427564 8.0667418,10.2013669 9.71501391,10.2013669 L36.4787491,10.2013669 C38.1318315,10.2013669 38.5095084,11.1327779 37.3230956,12.2809751 L8.87066736,39.8169228 C7.68390465,40.9654587 6.72184339,40.5548738 6.72184339,38.9004537 L6.72184339,13.1974442 Z" id="fill-3" fill="#F8F8F8" sketch:type="MSShapeGroup" mask="url(#mask-4)">
+                                <g transform="translate(22.221843, 25.201367) rotate(45.000000) translate(-22.221843, -25.201367) "></g>
+                            </path>
+                            <path d="M6.72184339,10.1974442 C6.72184339,8.54275637 8.0667418,7.20136686 9.71501391,7.20136686 L36.4787491,7.20136686 C38.1318315,7.20136686 38.5095084,8.13277786 37.3230956,9.2809751 L8.87066736,36.8169228 C7.68390465,37.9654587 6.72184339,37.5548738 6.72184339,35.9004537 L6.72184339,10.1974442 Z" id="border-9" stroke="#737373" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup" transform="translate(22.221843, 22.201367) rotate(45.000000) translate(-22.221843, -22.201367) "></path>
+                        </g>
+                    </g>
+                    <g id="strom-2" transform="translate(1230.000000, 435.000000)" sketch:type="MSShapeGroup">
+                        <g id="koruna">
+                            <ellipse id="shafow" fill="#E1E1E1" cx="29.5" cy="33" rx="29.5" ry="27"></ellipse>
+                            <ellipse id="light" fill="#FFFFFF" cx="29.5" cy="27" rx="29.5" ry="27"></ellipse>
+                            <path d="M29.5,57 C45.2401154,57 58,45.3594035 58,31 C58,16.6405965 45.2401154,5 29.5,5 C13.7598846,5 1,16.6405965 1,31 C1,45.3594035 13.7598846,57 29.5,57 Z" id="fill" fill="#F8F8F8"></path>
+                            <circle id="border" stroke="#737373" stroke-width="2" stroke-linecap="round" cx="30" cy="31" r="30"></circle>
+                        </g>
+                        <path d="M30,30.0195312 L30,92.6995316" id="Path-31" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M30.0076425,41.6493597 L43.049493,28.6075093" id="Path-32" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M22.9289322,51 L30,43.9289322" id="Path-33" stroke="#737373" stroke-width="2" stroke-linecap="round" transform="translate(26.464466, 47.464466) scale(-1, 1) translate(-26.464466, -47.464466) "></path>
+                    </g>
+                    <g id="lampa" transform="translate(1153.000000, 441.000000)" sketch:type="MSShapeGroup">
+                        <path d="M1,86 L1,11" id="Path-117" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                        <circle id="Oval-24" stroke="#737373" stroke-width="2" stroke-linecap="round" cx="11" cy="10" r="10"></circle>
+                        <rect id="Rectangle-101" fill="#FFFFFF" x="2" y="9" width="21" height="13"></rect>
+                        <path d="M16.5058593,11.9648445 C16.7787657,10.3274061 18.3390201,9 20.0016655,9 L21.9983345,9 C23.6561086,9 25.2219324,10.3315945 25.4941407,11.9648445 L25.8348703,14.009222 C25.9260689,14.5564136 25.5443356,15 25.0046024,15 L16.9953976,15 C16.4456547,15 16.0751625,14.5490248 16.1651297,14.009222 L16.5058593,11.9648445 Z" id="Rectangle-102" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                    </g>
+                    <g id="lampa-2" transform="translate(916.000000, 441.000000)" sketch:type="MSShapeGroup">
+                        <path d="M1,86 L1,11" id="Path-117" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                        <circle id="Oval-24" stroke="#737373" stroke-width="2" stroke-linecap="round" cx="11" cy="10" r="10"></circle>
+                        <rect id="Rectangle-101" fill="#FFFFFF" x="2" y="9" width="21" height="13"></rect>
+                        <path d="M16.5058593,11.9648445 C16.7787657,10.3274061 18.3390201,9 20.0016655,9 L21.9983345,9 C23.6561086,9 25.2219324,10.3315945 25.4941407,11.9648445 L25.8348703,14.009222 C25.9260689,14.5564136 25.5443356,15 25.0046024,15 L16.9953976,15 C16.4456547,15 16.0751625,14.5490248 16.1651297,14.009222 L16.5058593,11.9648445 Z" id="Rectangle-102" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                    </g>
+                    <g id="lampa-3" transform="translate(554.000000, 441.000000)" sketch:type="MSShapeGroup">
+                        <path d="M1,86 L1,11" id="Path-117" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                        <circle id="Oval-24" stroke="#737373" stroke-width="2" stroke-linecap="round" cx="11" cy="10" r="10"></circle>
+                        <rect id="Rectangle-101" fill="#FFFFFF" x="2" y="9" width="21" height="13"></rect>
+                        <path d="M16.5058593,11.9648445 C16.7787657,10.3274061 18.3390201,9 20.0016655,9 L21.9983345,9 C23.6561086,9 25.2219324,10.3315945 25.4941407,11.9648445 L25.8348703,14.009222 C25.9260689,14.5564136 25.5443356,15 25.0046024,15 L16.9953976,15 C16.4456547,15 16.0751625,14.5490248 16.1651297,14.009222 L16.5058593,11.9648445 Z" id="Rectangle-102" stroke="#737373" stroke-width="2" stroke-linecap="round"></path>
+                    </g>
+                    <g id="lavicka" transform="translate(586.000000, 518.000000)" stroke="#737373" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup">
+                        <path d="M29,10 L29,2" id="Path-221"></path>
+                        <path d="M5,10 L5,2" id="Path-222"></path>
+                        <path d="M0,1 L34,1" id="Path-223"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

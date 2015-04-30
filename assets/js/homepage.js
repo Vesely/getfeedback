@@ -1,5 +1,24 @@
 $(function() {
 
+
+    // var bgBuildings = function() {
+    //     var $bgBuildings = $('.background .buildings');
+    //     var $img = $bgBuildings.find('img');
+    //     var top = $img.offset().top;
+
+    //     console.log(top);
+    //     if (top < 150) {
+    //         $bgBuildings.addClass('absolute');
+    //     }else{
+    //         $bgBuildings.removeClass('absolute');
+    //     }
+    // };
+
+    // bgBuildings();
+
+    // $(window).resize(bgBuildings);
+
+
     var $progress = $('.progress');
     var $designInput = $('.form .design-input');
     var $formModal = $('.form-modal');
@@ -24,16 +43,16 @@ $(function() {
         success: function(designId) {
             setTimeout(function() {
                 window.location = 'design/'+designId;
-            }, 500);
+            }, 1000);
             // window.location.replace('design/'+designId);
         },
         progressall: function (e, data) {
-            var progress = parseInt(data.loaded / data.total * 100, 10);
-            $('.progress').css(
-                'height',
-                progress + '%'
-            );
+            var progress = parseInt(data.loaded / data.total * 99, 10);
+            $('.progress').animate({
+                'height':  progress + '%'
+            });
         }
     }).prop('disabled', !$.support.fileInput)
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
+
 }); 

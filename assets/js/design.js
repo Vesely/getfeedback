@@ -316,13 +316,16 @@ io.socket.on("feedbackmessages", function(event){
 
 //Add feedback point
 var $feedbackAdd = $('.feedback-add');
+var $feedbackAddBox = $feedbackAdd.find('.feedback-box');
 var $feedbackAddForm = $feedbackAdd.find('.form');
+var $feedbackAddInput = $feedbackAddForm.find('.form-control');
 
 var addFeedbackPoint = function () {
+	//Hide all feedback boxes
 	hideAllFeedbackBoxes();
 	$feedbackAdd.find('.feedback-box').removeClass('hidden');
 
-
+	//Redrow btn (chceck if user is identify)
 	redrawFeedbackBtn();
 
 	//Offsets
@@ -349,6 +352,9 @@ var addFeedbackPoint = function () {
 
 	//Focus the input
 	$feedbackAddForm.find('.form-control').focus();
+
+	console.log(topInBox);
+	console.log(leftInBox);
 	
 	return false;
 };
@@ -367,18 +373,21 @@ var sendFeedback = function() {
 
 	console.log('Odesílám feedback');
 
+	console.log(top);
+	console.log(left);
+
 	if (!userId) {
 		//Show identify popup
 		identifyPopup.show();
 	}else{
 		//post
 		io.socket.post('/api/feedbacks/create', {content: content, designId: designId, userId: userId, top: top, left: left}, function (response) {
-	        console.log(response);
-	        
-	        hideAllFeedbackBoxes();
-	        showFeedbackBox(response.id);
-	    	
-	    	renderFeedbacks();
+			console.log(response);
+
+			hideAllFeedbackBoxes();
+			showFeedbackBox(response.id);
+
+			renderFeedbacks();
 	    });
 		//Clear content input
 		$contentInput.val('');
