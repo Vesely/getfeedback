@@ -18,6 +18,12 @@ $(function() {
 
     // $(window).resize(bgBuildings);
 
+    var setWrapperHeight = function() {
+        $('.wrapper').height($(window).height());
+    };
+    setWrapperHeight();
+    $(window).resize(setWrapperHeight);
+
 
     var $progress = $('.progress');
     var $designInput = $('.form .design-input');
