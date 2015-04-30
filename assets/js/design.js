@@ -114,7 +114,7 @@ var redrawFeedbackBtn = function () {
 	if (!getUserFromStorage()) {
 		//Change button text
 		$sendBtn.addClass('btn-identify');
-		$sendBtn.find('span').text('Identify yourself');
+		// $sendBtn.find('span').text('Identify yourself');
 	}else{
 		$sendBtn.removeClass('btn-identify');
 		$sendBtn.find('span').text('Send it');
@@ -198,46 +198,64 @@ var rebuildFeedbackActions = function() {
 var renderFeedbackMessages = function() {
 	var $feedbacks = $('.renderFeedbacks .feedback');
 	$('.other-messages').html('');
+	io.socket.get('/api/user', function (usrs) {
+		var users = [];
+		for (var i = 0; i < usrs.length; i++) {
+			var id = usrs[i].id;
+			var email = usrs[i].email;
 
-	$feedbacks.each(function(index){
-		var $feedback = $(this);
-		var feedbackId = $feedback.data('id');
-		var $otherMessages = $feedback.find('.other-messages');
+			// users.push({id: email})
+			users[id] = email;
+			// users.push({usrs[i].id});
+		}
 
-		// console.log(feedbackId);
+		$feedbacks.each(function(index){
+			var $feedback = $(this);
+			var feedbackId = $feedback.data('id');
+			var $otherMessages = $feedback.find('.other-messages');
 
-		io.socket.get('/api/feedbackMessages?feedbackId='+feedbackId, function (messages) {
-			for (var i = 0; i < messages.length; i++) {
-				var msg = messages[i];
-				// console.log(msg);
-				$otherMessages.append('<div class="message message-'+msg.id+'" data-user="'+msg.userId+'"><p>'+msg.content+'</p><span class="badge user"></span></div>');
-				var $msg = $('.message-'+msg.id);
+			// console.log(feedbackId);
 
-				// console.log(msg);
-				//Get user who write it
+			io.socket.get('/api/feedbackMessages?feedbackId='+feedbackId, function (messages) {
+				for (var i = 0; i < messages.length; i++) {
+					var msg = messages[i];
+					// console.log(msg);
+					$otherMessages.append('<div class="message message-'+msg.id+'" data-user="'+msg.userId+'"><p>'+msg.content+'</p><span class="badge user"></span></div>');
+					var $msg = $('.message-'+msg.id);
 
-				$msg.find('.user').text(msg.userId);
-				io.socket.get('/api/user?id='+msg.userId, function (user) {
-					$msg.find('.user').text(msg.userId+ ' - '+user.email);
+					// console.log(msg);
+					//Get user who write it
+
+					// $msg.find('.user').text(msg.userId);
+					// io.socket.get('/api/user?id='+msg.userId, function (user) {
+					// 	$msg.find('.user').text(msg.userId+ ' - '+user.email);
+						
+					// 	var myUserId = getUserFromStorage();
+					// 	if(myUserId == msg.userId) {
+					// 		$msg.find('.user').addClass('its-me');
+					// 	}
+					// });
+
+					var userEmail = users[msg.userId];
+					$msg.find('.user').text(userEmail);
 					
 					var myUserId = getUserFromStorage();
 					if(myUserId == msg.userId) {
 						$msg.find('.user').addClass('its-me');
 					}
-				});
-
-
-			};
-			redrawFeedbackBtn();
-			// if (messages.length > 0) {
-			// 	//Change button text
-			// 	var $sendBtn = $msg.parents('.feedback').first().find('.btn span');
-			// 	$sendBtn.text('Identify yourself');
-			// };
+				};
+				redrawFeedbackBtn();
+				// if (messages.length > 0) {
+				// 	//Change button text
+				// 	var $sendBtn = $msg.parents('.feedback').first().find('.btn span');
+				// 	$sendBtn.text('Identify yourself');
+				// };
+			});
+			
 		});
-		
 	});
 }
+
 
 // Load feedbacks
 var renderFeedbacks = function () {
@@ -278,6 +296,7 @@ var renderFeedbacks = function () {
 					$renderFeedbacks.find('.message .user').addClass('its-me');
 				}
 			});
+
 			$('.feedback-add .point').text(feedbacks.length+1);
 			
 			var hash = 'readed-design' + '' +designId + '-feedback' + fdb.id;

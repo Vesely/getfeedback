@@ -23,6 +23,10 @@ IdentifyPopup.prototype = {
 		this.backdrop = $('.identify-backdrop');
 		this.input = this.popup.find('.form-control');
 
+
+		this.backdrop.on('click', function(){
+			self.close();
+		});
 	},
 
 	show: function(feedbackId)
